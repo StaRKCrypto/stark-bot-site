@@ -1,0 +1,23 @@
+AddType video/mp4 .mp4
+AddType audio/mpeg .mp3
+AddType image/svg+xml .svg
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+  ExpiresByType audio/mpeg "access plus 7 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <Files "config.js">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </Files>
+  <Files "index.html">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </Files>
+</IfModule>
