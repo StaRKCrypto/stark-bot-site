@@ -1,0 +1,68 @@
+{
+  "updated_at": null,
+  "desks": [
+    {
+      "name": "Arcus",
+      "status": null,
+      "volume_usd_7d": null,
+      "volume_usd_total": null,
+      "pnl_usd_7d": null,
+      "trades_7d": null,
+      "updated_at": null
+    },
+    {
+      "name": "Nado",
+      "status": null,
+      "volume_usd_7d": null,
+      "volume_usd_total": null,
+      "pnl_usd_7d": null,
+      "trades_7d": null,
+      "updated_at": null
+    },
+    {
+      "name": "Lighter RH",
+      "status": null,
+      "volume_usd_7d": null,
+      "volume_usd_total": null,
+      "pnl_usd_7d": null,
+      "trades_7d": null,
+      "updated_at": null
+    },
+    {
+      "name": "Profit Taking",
+      "status": null,
+      "volume_usd_7d": null,
+      "volume_usd_total": null,
+      "pnl_usd_7d": null,
+      "trades_7d": null,
+      "updated_at": null
+    },
+    {
+      "name": "Youtube",
+      "status": null,
+      "volume_usd_7d": null,
+      "volume_usd_total": null,
+      "pnl_usd_7d": null,
+      "trades_7d": null,
+      "updated_at": null
+    },
+    {
+      "name": "Mochee",
+      "status": null,
+      "volume_usd_7d": null,
+      "volume_usd_total": null,
+      "pnl_usd_7d": null,
+      "trades_7d": null,
+      "updated_at": null
+    },
+    {
+      "name": "Yochee",
+      "status": null,
+      "volume_usd_7d": null,
+      "volume_usd_total": null,
+      "pnl_usd_7d": null,
+      "trades_7d": null,
+      "updated_at": null
+    }
+  ]
+}
