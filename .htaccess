@@ -20,4 +20,7 @@ AddType image/svg+xml .svg
   <Files "index.html">
     Header set Cache-Control "no-cache, must-revalidate"
   </Files>
+  <Files "stats.json">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </Files>
 </IfModule>
