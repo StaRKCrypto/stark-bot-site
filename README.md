@@ -3,7 +3,7 @@
 stark-bot.com static site (GitHub Pages from `main` root, `CNAME` = stark-bot.com). Plain HTML, CSS and JS. No build step, no trackers, no external requests.
 
 ## Layout
-- `index.html` home: hero, $STARKBOT launch, live desks, bot details, proof, roadmap, FAQ, risk.
+- `index.html` home: hero, results, live desks, bots, $STARKBOT launch, roadmap, FAQ, risk.
 - `desks/index.html` the full desk board.
 - `css/site.css`, `js/site.js`, `fonts/` (self-hosted IBM Plex).
 - `config.js` the only place the contract address is set. Empty shows "Coming at launch" and keeps Copy off.
