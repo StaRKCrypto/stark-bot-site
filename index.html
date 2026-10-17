@@ -3,244 +3,309 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>StaRK Bots · $STARKBOT · Automated desks, real numbers</title>
-<meta name="description" content="StaRK Bots run automated volume desks and a video bot. See 30 days of real Arcus and Nado numbers, how each bot works, and the $STARKBOT launch. Not financial advice." />
+<title>StaRK Bots · $STARKBOT · we farm points while you sleep</title>
+<meta name="description" content="StaRK Bots: nine bots that farm points, take profit and ship videos while you sleep. Real dated numbers, zero financial advice. $STARKBOT is not issued yet." />
 <link rel="canonical" href="https://stark-bot.com/" />
 <meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#ffffff" />
-<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#14002b" />
+<meta name="color-scheme" content="dark" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="StaRK Bots" />
 <meta property="og:url" content="https://stark-bot.com/" />
-<meta property="og:title" content="StaRK Bots · $STARKBOT" />
-<meta property="og:description" content="Automated desks with real, dated numbers. 30 days of Arcus and Nado, a video bot that ships on its own, and the $STARKBOT launch." />
+<meta property="og:title" content="StaRK Bots · we farm points while you sleep" />
+<meta property="og:description" content="Nine bots, real dated numbers, no financial advice. $STARKBOT is not issued yet." />
 <meta property="og:image" content="https://stark-bot.com/brand/01-hero.jpg" />
 <meta property="og:image:width" content="1600" />
 <meta property="og:image:height" content="900" />
 <meta property="og:image:alt" content="Hands over a glass trading desk, the StaRK Bots hero still." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@StaRKCryptoBots" />
-<meta name="twitter:title" content="StaRK Bots · $STARKBOT" />
-<meta name="twitter:description" content="Automated desks with real, dated numbers. Not financial advice." />
+<meta name="twitter:title" content="StaRK Bots · we farm points while you sleep" />
+<meta name="twitter:description" content="Nine bots, real dated numbers. Not financial advice." />
 <meta name="twitter:image" content="https://stark-bot.com/brand/01-hero.jpg" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preload" href="fonts/ibm-plex-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="css/site.css" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"StaRK Bots","url":"https://stark-bot.com/","description":"Automated desks with real, dated numbers. Not financial advice.","publisher":{"@type":"Organization","name":"StaRK Bots","url":"https://stark-bot.com/","logo":"https://stark-bot.com/brand/BOTS-logo-nav.png","sameAs":["https://x.com/StaRKCryptoBots"]}}
-</script>
+<link rel="preload" href="fonts/ibm-plex-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="css/meme.css" />
 <script src="config.js"></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header"><div class="wrap bar">
-  <a class="brand" href="#top"><img src="brand/BOTS-logo-nav.png" width="64" height="64" alt="" /><span>StaRK Bots</span></a>
+<a class="skip" href="#main">skip to content</a>
+<div class="ticker top" aria-hidden="true"><div class="track">
+<span>★ we farm points while you sleep</span><span>★ wagmi (probably)</span><span>★ $STARKBOT not issued yet, ignore the fakes</span><span>★ 9 bots, 0 days off</span><span>★ not financial advice, ngmi if you ape blind</span><span>★ 80.7% maker or it didn't happen</span>
+<span>★ we farm points while you sleep</span><span>★ wagmi (probably)</span><span>★ $STARKBOT not issued yet, ignore the fakes</span><span>★ 9 bots, 0 days off</span><span>★ not financial advice, ngmi if you ape blind</span><span>★ 80.7% maker or it didn't happen</span>
+</div></div>
+<header class="hdr"><div class="bar">
+  <a class="brand" href="#top" id="logo"><img src="brand/BOTS-logo-nav.png" width="44" height="44" alt="" /><span>stark<b>bots</b>.exe</span></a>
   <nav class="nav" id="nav" aria-label="Primary">
-    <a href="#launch">$STARKBOT</a><a href="#desks">Live desks</a><a href="#bots">Bots</a><a href="#proof">Results</a><a href="#roadmap">Roadmap</a><a href="#faq">FAQ</a>
-    <a href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">X</a>
+    <a href="#launch">$starkbot</a><a href="#receipts">receipts</a><a href="#bots">bots</a><a href="#proof">proof</a><a href="#roadmap">roadmap</a><a href="#faq">faq</a><a href="desks/">desks</a>
+    <a href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">x ↗</a>
   </nav>
-  <div class="bar-actions">
-    <button class="icon-btn" id="sound-btn" type="button" aria-pressed="true" aria-label="Mute background music"><span class="snd-dot"></span><span id="sound-label">Sound on</span></button>
-    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-  </div>
+  <button class="snd" id="sound-btn" type="button" aria-pressed="true" aria-label="Mute background music"><span class="dot"></span><span id="sound-label">sound on</span></button>
+  <button class="menu" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">menu</button>
 </div></header>
 
 <main id="main">
 <section class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true"><span class="blob a" data-par="-0.12"></span><span class="blob b" data-par="0.1"></span><span class="blob c" data-par="-0.05"></span><span class="grid-fade"></span></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="kicker rv"><span class="pulse"></span>Automated desks · 30 days on the record</p>
-      <h1 class="rv">Bots that work.<br /><span class="grad">Numbers you can check.</span></h1>
-      <p class="lede rv">StaRK Bots run volume desks and a video channel by themselves. Every figure here is dated and linked to its post. $STARKBOT is the coin for the desks, and it is not issued yet.</p>
-      <div class="hero-cta rv"><a class="btn primary" href="#proof">See the results</a><a class="btn" href="#launch">$STARKBOT launch</a><a class="btn ghost" href="#bots">Meet the bots <span aria-hidden="true">→</span></a></div>
-    </div>
-    <div class="hero-stage rv">
-      <div class="coin-box" id="coin-box" data-par="0.05">
-        <span class="ring r1" aria-hidden="true"></span><span class="ring r2" aria-hidden="true"></span>
-        <img class="coin-still" src="brand/hero-coin.webp" width="1100" height="1100" alt="A 3D hexagonal StaRK coin with an S on its face" fetchpriority="high" decoding="async" />
-        <span class="coin-shadow" aria-hidden="true"></span>
+      <p class="sticker s1">gm anon</p>
+      <h1><span class="cap" data-glitch="we farm points">we farm points</span> <span class="cap pink" data-glitch="while you sleep">while you sleep</span></h1>
+      <p class="lede">nine bots. perp volume, take-profit ladders, a youtube bot that uploads on its own. every number on this page is dated and linked to the post it came from. no wallets, no balances, no pnl, no keys. <b>$STARKBOT is not issued yet.</b></p>
+      <div class="cta"><a class="btn y" href="#receipts">see the receipts</a><a class="btn g" href="#launch">$starkbot status</a><a class="btn" href="#bots">meet the bots →</a></div>
+      <div class="win term" aria-label="terminal">
+        <div class="tb"><span>~/starkbot — zsh</span><i aria-hidden="true">_ □ x</i></div>
+        <div class="wb mono" id="term" data-lines="$ ./farm --sleep=true|arcus ......... quoting maker|nado ......... quoting maker|youtube ...... rendering video #lots|profit-taking  1 token on watch|$ echo owner is asleep|owner is asleep. bots are not.">
+          <span class="ln">$ ./farm --sleep=true</span><span class="ln">arcus ......... quoting maker</span><span class="ln">nado ......... quoting maker</span><span class="ln">youtube ...... rendering video #lots</span><span class="ln">profit-taking  1 token on watch</span><span class="ln">$ echo owner is asleep</span><span class="ln">owner is asleep. bots are not.<em class="caret">█</em></span>
+        </div>
       </div>
-      <p class="coin-hint" aria-hidden="true">Drag to spin</p>
-      <div class="float-card one"><small>30d volume</small><b data-stat="vol">—</b></div>
-      <div class="float-card two"><small>30d fills</small><b data-stat="fills">—</b></div>
+    </div>
+    <div class="hero-stage">
+      <div class="win coinwin">
+        <div class="tb"><span>starkcoin.png</span><i aria-hidden="true">_ □ x</i></div>
+        <div class="wb">
+          <div class="coin-box" id="coin-box">
+            <img class="coin-still" src="brand/hero-coin.webp" width="1100" height="1100" alt="A 3D hexagonal StaRK coin with an S on its face" fetchpriority="high" decoding="async" />
+          </div>
+          <p class="cap-line">drag the coin. it spins. very utility.</p>
+        </div>
+      </div>
+      <svg class="doodle d1" aria-hidden="true"><use href="img/doodles.svg#botchan"/></svg>
+      <svg class="doodle d2" aria-hidden="true"><use href="img/doodles.svg#wagmi"/></svg>
+      <svg class="doodle d3" aria-hidden="true"><use href="img/doodles.svg#ngmi"/></svg>
+      <p class="bubble b1">wagmi</p><p class="bubble b2">ngmi (if you don't read)</p>
     </div>
   </div>
-  <div class="wrap"><div class="statband rv" aria-label="30-day combined numbers">
-    <div><small>30-day volume</small><strong data-stat="vol">—</strong></div>
-    <div><small>30-day fills</small><strong data-stat="fills">—</strong></div>
-    <div><small>Points <em>owner-stated</em></small><strong data-stat="points">—</strong></div>
-    <div><small>Bots</small><strong><span class="n" data-count="9" data-kind="int">9</span></strong></div>
-  </div></div>
 </section>
-<div class="ticker" aria-hidden="true"><div class="ticker-track">
-  <span>Arcus + Nado, 30 days</span><span>Mostly maker fills</span><span>Run automatically</span><span>200+ videos in a week</span><span>Not financial advice</span><span>No keys, no balances on this site</span>
-  <span>Arcus + Nado, 30 days</span><span>Mostly maker fills</span><span>Run automatically</span><span>200+ videos in a week</span><span>Not financial advice</span><span>No keys, no balances on this site</span>
-</div></div>
 
 <section id="launch"><div class="wrap">
-  <div class="section-head rv"><p class="kicker gold">$STARKBOT</p><h2>The launch</h2><p class="lede">$STARKBOT is the coin for the StaRK desks. It is not issued. There is no price and no contract until the address is published here.</p></div>
-  <div class="launch-card glass rv">
-    <div>
-      <div class="ca-row"><span class="ca-label">CA</span><code class="ca-val empty" data-ca>Coming at launch</code><button class="btn primary" type="button" data-copy disabled>Copy CA</button></div>
-      <p class="help" id="copy-help" role="status">Copy turns on when the contract is published here.</p>
-      <p class="help">When a contract exists it appears here and on <a href="https://x.com/StaRKCryptoBots" rel="noopener noreferrer" target="_blank">@StaRKCryptoBots</a> the same day. Check both before you trust any address.</p>
+  <h2 class="cap sm">$STARKBOT <small>the launch</small></h2>
+  <div class="win">
+    <div class="tb"><span>launch_status.txt</span><i aria-hidden="true">_ □ x</i></div>
+    <div class="wb launch">
+      <div>
+        <p class="lede">$STARKBOT is the coin for the desks. it is <b>not issued</b>. no price, no contract, until the address is posted here and on <a href="https://x.com/StaRKCryptoBots" target="_blank" rel="noopener noreferrer">@StaRKCryptoBots</a> the same day. anything else is a scam, ngmi.</p>
+        <div class="ca-row"><span class="ca-label">CA</span><code class="ca-val empty" data-ca>Coming at launch</code><button class="btn y" type="button" data-copy disabled>copy ca</button></div>
+        <p class="help" id="copy-help" role="status">copy turns on when the contract is published here.</p>
+      </div>
+      <ul class="facts">
+        <li><small>status</small><b>not issued</b></li>
+        <li><small>price</small><b>none</b></li>
+        <li><small>contract</small><b>coming at launch</b></li>
+        <li><small>keys</small><b>never on this site</b></li>
+      </ul>
     </div>
-    <ul class="facts">
-      <li><small>Status</small><strong>Not issued</strong></li>
-      <li><small>Price</small><strong>None</strong></li>
-      <li><small>Contract</small><strong>Coming at launch</strong></li>
-      <li><small>Keys</small><strong>Never on this site</strong></li>
-    </ul>
   </div>
 </div></section>
 
-<section id="desks"><div class="wrap">
-  <div class="section-head rv"><p class="kicker">Live desks</p><h2>The desks, at a glance</h2><p class="lede">Volume, fills, maker share, points and status. Read from one file. A dash means that number has not been published yet.</p></div>
-  <p class="note" id="period">Period: —</p>
-  <div class="grid cards" id="desk-board" style="margin-top:14px"></div>
-  <div class="combined glass" id="combined"></div>
-  <p class="note" id="load-note" role="status" style="margin-top:14px">Points are owner-stated. Figures come from <a href="data/stats.json">data/stats.json</a>. <a href="desks/">Open the full desks page</a>.</p>
+<div class="ticker mid" aria-hidden="true"><div class="track">
+<span>▲ arcus + nado · 30 days</span><span>▲ mostly maker fills</span><span>▲ run automatically</span><span>▲ 200+ videos in a week</span><span>▲ no keys no balances on this site</span><span>▲ dyor or ngmi</span>
+<span>▲ arcus + nado · 30 days</span><span>▲ mostly maker fills</span><span>▲ run automatically</span><span>▲ 200+ videos in a week</span><span>▲ no keys no balances on this site</span><span>▲ dyor or ngmi</span>
+</div></div>
+
+<section id="receipts"><div class="wrap">
+  <h2 class="cap sm">the receipts <small>30-day sample</small></h2>
+  <p class="note" id="period">period: 2026-09-17 to 2026-10-17 · points are owner-stated · unknown numbers say "tracking soon", we don't make stuff up</p>
+  <div class="bigstats">
+    <div class="big y"><small>combined 30d volume</small><b data-stat="vol">$1,394,172</b></div>
+    <div class="big g"><small>combined 30d fills</small><b data-stat="fills">19,809</b></div>
+    <div class="big p"><small>combined points <em>owner-stated</em></small><b data-stat="points">74</b></div>
+  </div>
+  <div class="desks">
+    <article class="win"><div class="tb"><span>arcus.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>arcus</h3><dl>
+        <div><dt>30d volume</dt><dd data-d="arcus.volume_usd">$1,135,152</dd></div>
+        <div><dt>fills</dt><dd data-d="arcus.fills">18,558</dd></div>
+        <div><dt>maker</dt><dd data-d="arcus.maker_pct">80.7%</dd></div>
+        <div><dt>points <em>owner-stated</em></dt><dd data-d="arcus.points">22</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>nado.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>nado</h3><dl>
+        <div><dt>30d volume</dt><dd data-d="nado.volume_usd">$259,020</dd></div>
+        <div><dt>fills</dt><dd data-d="nado.fills">1,251</dd></div>
+        <div><dt>maker</dt><dd data-d="nado.maker_pct">87.6%</dd></div>
+        <div><dt>points <em>owner-stated</em></dt><dd data-d="nado.points">52</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>lighter_rh.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>lighter rh</h3><dl>
+        <div><dt>trades, total</dt><dd>169</dd></div>
+        <div><dt>trades, 30 days</dt><dd>75</dd></div>
+        <div><dt>volume / points</dt><dd class="soon">tracking soon</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>profit_taking.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>profit taking</h3><dl>
+        <div><dt>take-profit sells</dt><dd>9</dd></div>
+        <div><dt>tokens watched</dt><dd>1</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>youtube.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>youtube <em>owner-stated</em></h3><dl>
+        <div><dt>views</dt><dd>6.1K</dd></div>
+        <div><dt>watch hours</dt><dd>29.2</dd></div>
+        <div><dt>subscribers</dt><dd>15</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>the_rest.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>everyone else</h3><dl>
+        <div><dt>mochee &amp; yochee</dt><dd class="soon">tracking soon</dd></div>
+        <div><dt>jarvis · api fixer · trader</dt><dd class="soon">tracking soon</dd></div></dl></div></article>
+  </div>
+  <p class="note" id="load-note" role="status">figures read from <a href="data/stats.json">data/stats.json</a>. <a href="desks/">full desk board</a></p>
 </div></section>
 
 <section id="bots"><div class="wrap">
-  <div class="section-head rv"><p class="kicker violet">The bots</p><h2>What each one does</h2><p class="lede">Nine bots. Each card says what it does, walks through how it works in plain steps, and shows its stats.</p></div>
-  <nav class="bot-tabs" aria-label="Jump to a bot"><a href="#bot-arcus">Arcus</a><a href="#bot-nado">Nado</a><a href="#bot-lighter-rh">Lighter RH</a><a href="#bot-profit-taking">Profit Taking</a><a href="#bot-youtube">Youtube</a><a href="#bot-mochee-yochee">Mochee and Yochee</a><a href="#bot-jarvis">Jarvis</a><a href="#bot-api-broker-fixer">API Broker And Fixer</a><a href="#bot-trader">Trader</a></nav>
-  <article class="bot glass rv" id="bot-arcus">
-  <div><p class="kicker violet">01 · Perp volume farm</p><h3>Arcus</h3>
-  <h4 style="margin-top:18px">What it does</h4><p>Trades a perpetuals exchange around the clock to build volume for points programs. It aims to quote as a maker, so most fills come from resting orders instead of crossing the spread.</p></div>
-  <div><h4>How it works</h4><ol class="pipe"><li>Reads the market and picks price zones to quote around.</li><li>Places resting limit orders on both sides of those zones.</li><li>Collects fills, re-quotes, and keeps a kill switch armed.</li><li>Reports volume, fills, maker share and points.</li></ol></div>
-  <div data-bot-stats="arcus"><h4>Stats</h4><p class="meta">Loading…</p></div>
+  <h2 class="cap sm">the bots <small>nine of them, no days off</small></h2>
+  <nav class="chips" aria-label="Jump to a bot"><a href="#bot-arcus">arcus</a><a href="#bot-nado">nado</a><a href="#bot-lighter-rh">lighter rh</a><a href="#bot-profit-taking">profit taking</a><a href="#bot-youtube">youtube</a><a href="#bot-mochee-yochee">mochee &amp; yochee</a><a href="#bot-jarvis">jarvis</a><a href="#bot-api-broker-fixer">api broker &amp; fixer</a><a href="#bot-trader">trader</a></nav>
+  <div class="botgrid">
+<article class="win bot" id="bot-arcus">
+  <div class="tb"><span>01_arcus.exe</span><i aria-hidden="true">_ □ x</i></div>
+  <div class="wb">
+    <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#botchan"/></svg><div><p class="tag">01 · Perp volume farm</p><h3>Arcus</h3></div></div>
+    <h4>what it does</h4><p>Trades a perpetuals exchange around the clock to build volume for points programs. It aims to quote as a maker, so most fills come from resting orders instead of crossing the spread.</p>
+    <h4>how it works</h4><ol><li>Reads the market and picks price zones to quote around.</li><li>Places resting limit orders on both sides of those zones.</li><li>Collects fills, re-quotes, and keeps a kill switch armed.</li><li>Reports volume, fills, maker share and points.</li></ol>
+    <p class="bstat" data-bot="arcus"><b>$1,135,152</b> 30d volume · <b>18,558</b> fills · <b>80.7%</b> maker · <b>22</b> pts <i>(owner-stated)</i></p>
+  </div>
 </article>
-<article class="bot glass rv" id="bot-nado">
-  <div><p class="kicker violet">02 · Perp volume farm</p><h3>Nado</h3>
-  <h4 style="margin-top:18px">What it does</h4><p>The same volume-farm idea pointed at the Nado exchange. It keeps orders small and mostly passive so the cost of farming stays low.</p></div>
-  <div><h4>How it works</h4><ol class="pipe"><li>Connects to the Nado venue with its own limited account.</li><li>Quotes passive orders near the touch.</li><li>Tracks fills and the maker share of each.</li><li>Reports volume, fills, maker % and points.</li></ol></div>
-  <div data-bot-stats="nado"><h4>Stats</h4><p class="meta">Loading…</p></div>
+<article class="win bot" id="bot-nado">
+  <div class="tb"><span>02_nado.exe</span><i aria-hidden="true">_ □ x</i></div>
+  <div class="wb">
+    <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#wagmi"/></svg><div><p class="tag">02 · Perp volume farm</p><h3>Nado</h3></div></div>
+    <h4>what it does</h4><p>The same volume-farm idea pointed at the Nado exchange. It keeps orders small and mostly passive so the cost of farming stays low.</p>
+    <h4>how it works</h4><ol><li>Connects to the Nado venue with its own limited account.</li><li>Quotes passive orders near the touch.</li><li>Tracks fills and the maker share of each.</li><li>Reports volume, fills, maker % and points.</li></ol>
+    <p class="bstat" data-bot="nado"><b>$259,020</b> 30d volume · <b>1,251</b> fills · <b>87.6%</b> maker · <b>52</b> pts <i>(owner-stated)</i></p>
+  </div>
 </article>
-<article class="bot glass rv" id="bot-lighter-rh">
-  <div><p class="kicker violet">03 · Order-book desk</p><h3>Lighter RH</h3>
-  <h4 style="margin-top:18px">What it does</h4><p>An order-ladder desk for the Lighter venue. It lays out a ladder of orders and adjusts it as price moves.</p></div>
-  <div><h4>How it works</h4><ol class="pipe"><li>Builds a ladder of price levels.</li><li>Posts and refreshes orders as the market moves.</li><li>Counts fills and volume.</li><li>Publishes the tape once the desk reports.</li></ol></div>
-  <div data-bot-stats="lighter-rh"><h4>Stats</h4><p class="meta">Loading…</p></div>
+<article class="win bot" id="bot-lighter-rh">
+  <div class="tb"><span>03_lighter-rh.exe</span><i aria-hidden="true">_ □ x</i></div>
+  <div class="wb">
+    <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#ngmi"/></svg><div><p class="tag">03 · Order-book desk</p><h3>Lighter RH</h3></div></div>
+    <h4>what it does</h4><p>An order-ladder desk for the Lighter venue. It lays out a ladder of orders and adjusts it as price moves.</p>
+    <h4>how it works</h4><ol><li>Builds a ladder of price levels.</li><li>Posts and refreshes orders as the market moves.</li><li>Counts fills and volume.</li><li>Publishes the tape once the desk reports.</li></ol>
+    <p class="bstat" data-bot="lighter-rh"><b>169</b> trades total · <b>75</b> in 30 days</p>
+  </div>
 </article>
-<article class="bot glass rv" id="bot-profit-taking">
-  <div><p class="kicker violet">04 · Multi-chain 2× take-profit</p><h3>Profit Taking</h3>
-  <h4 style="margin-top:18px">What it does</h4><p>Watches positions across several chains and takes profit in steps once a position has doubled, so gains are not left to chance.</p></div>
-  <div><h4>How it works</h4><ol class="pipe"><li>Watches the tracked positions on each chain.</li><li>Flags a position when it reaches 2×.</li><li>Sells a planned slice at each step of the ladder.</li><li>Logs each step so you can review it.</li></ol></div>
-  <div data-bot-stats="profit-taking"><h4>Stats</h4><p class="meta">Loading…</p></div>
+<article class="win bot" id="bot-profit-taking">
+  <div class="tb"><span>04_profit-taking.exe</span><i aria-hidden="true">_ □ x</i></div>
+  <div class="wb">
+    <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#chud"/></svg><div><p class="tag">04 · Multi-chain 2× take-profit</p><h3>Profit Taking</h3></div></div>
+    <h4>what it does</h4><p>Watches positions across several chains and takes profit in steps once a position has doubled, so gains are not left to chance.</p>
+    <h4>how it works</h4><ol><li>Watches the tracked positions on each chain.</li><li>Flags a position when it reaches 2×.</li><li>Sells a planned slice at each step of the ladder.</li><li>Logs each step so you can review it.</li></ol>
+    <p class="bstat" data-bot="profit-taking"><b>9</b> take-profit sells · <b>1</b> token watched</p>
+  </div>
 </article>
-<article class="bot glass rv" id="bot-youtube">
-  <div><p class="kicker violet">05 · Media bot</p><h3>Youtube</h3>
-  <h4 style="margin-top:18px">What it does</h4><p>A channel bot that makes and uploads videos on its own, from idea to publish, with no one clicking in between.</p></div>
-  <div><h4>How it works</h4><ol class="pipe"><li>Picks a topic and writes a short script.</li><li>Builds voice and visuals, then renders the video.</li><li>Uploads it with a title and description.</li><li>Repeats on a schedule and reports what shipped.</li></ol></div>
-  <div data-bot-stats="youtube"><h4>Stats</h4><p class="meta">Loading…</p></div>
+<article class="win bot" id="bot-youtube">
+  <div class="tb"><span>05_youtube.exe</span><i aria-hidden="true">_ □ x</i></div>
+  <div class="wb">
+    <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#botchan"/></svg><div><p class="tag">05 · Media bot</p><h3>Youtube</h3></div></div>
+    <h4>what it does</h4><p>A channel bot that makes and uploads videos on its own, from idea to publish, with no one clicking in between.</p>
+    <h4>how it works</h4><ol><li>Picks a topic and writes a short script.</li><li>Builds voice and visuals, then renders the video.</li><li>Uploads it with a title and description.</li><li>Repeats on a schedule and reports what shipped.</li></ol>
+    <p class="bstat" data-bot="youtube"><b>6.1K</b> views · <b>29.2</b> watch hours · <b>15</b> subs <i>(owner-stated)</i></p>
+  </div>
 </article>
-<article class="bot glass rv" id="bot-mochee-yochee">
-  <div><p class="kicker violet">06 · Media bots</p><h3>Mochee and Yochee</h3>
-  <h4 style="margin-top:18px">What it does</h4><p>A pair of media characters that publish content for the StaRK feed, running on the same hands-off loop as the video bot.</p></div>
-  <div><h4>How it works</h4><ol class="pipe"><li>Draft a post or clip in each character&#x27;s voice.</li><li>Check it against simple house rules.</li><li>Publish it to the feed.</li><li>Report what went out.</li></ol></div>
-  <div data-bot-stats="mochee-yochee"><h4>Stats</h4><p class="meta">Loading…</p></div>
+<article class="win bot" id="bot-mochee-yochee">
+  <div class="tb"><span>06_mochee-yochee.exe</span><i aria-hidden="true">_ □ x</i></div>
+  <div class="wb">
+    <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#wagmi"/></svg><div><p class="tag">06 · Media bots</p><h3>Mochee and Yochee</h3></div></div>
+    <h4>what it does</h4><p>A pair of media characters that publish content for the StaRK feed, running on the same hands-off loop as the video bot.</p>
+    <h4>how it works</h4><ol><li>Draft a post or clip in each character&#x27;s voice.</li><li>Check it against simple house rules.</li><li>Publish it to the feed.</li><li>Report what went out.</li></ol>
+    <p class="bstat soon">stats: <b>tracking soon</b></p>
+  </div>
 </article>
-<article class="bot glass rv" id="bot-jarvis">
-  <div><p class="kicker violet">07 · Operator assistant</p><h3>Jarvis</h3>
-  <h4 style="margin-top:18px">What it does</h4><p>The helper that keeps the other bots running. It watches their status and nudges them when something looks off.</p></div>
-  <div><h4>How it works</h4><ol class="pipe"><li>Checks each bot&#x27;s heartbeat.</li><li>Spots stalls, errors and odd numbers.</li><li>Restarts or alerts the owner.</li><li>Summarizes the day.</li></ol></div>
-  <div data-bot-stats="jarvis" data-nostats><h4>Stats</h4><p class="meta">Loading…</p></div>
+<article class="win bot" id="bot-jarvis">
+  <div class="tb"><span>07_jarvis.exe</span><i aria-hidden="true">_ □ x</i></div>
+  <div class="wb">
+    <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#ngmi"/></svg><div><p class="tag">07 · Operator assistant</p><h3>Jarvis</h3></div></div>
+    <h4>what it does</h4><p>The helper that keeps the other bots running. It watches their status and nudges them when something looks off.</p>
+    <h4>how it works</h4><ol><li>Checks each bot&#x27;s heartbeat.</li><li>Spots stalls, errors and odd numbers.</li><li>Restarts or alerts the owner.</li><li>Summarizes the day.</li></ol>
+    <p class="bstat soon">stats: <b>tracking soon</b></p>
+  </div>
 </article>
-<article class="bot glass rv" id="bot-api-broker-fixer">
-  <div><p class="kicker violet">08 · Plumbing bot</p><h3>API Broker And Fixer</h3>
-  <h4 style="margin-top:18px">What it does</h4><p>Sits between the bots and the services they call. It routes requests and retries or repairs them when a call fails.</p></div>
-  <div><h4>How it works</h4><ol class="pipe"><li>Receives a request from a bot.</li><li>Chooses a working route to the service.</li><li>Retries and repairs a failed call.</li><li>Hands the answer back.</li></ol></div>
-  <div data-bot-stats="api-broker-fixer" data-nostats><h4>Stats</h4><p class="meta">Loading…</p></div>
+<article class="win bot" id="bot-api-broker-fixer">
+  <div class="tb"><span>08_api-broker-fixer.exe</span><i aria-hidden="true">_ □ x</i></div>
+  <div class="wb">
+    <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#chud"/></svg><div><p class="tag">08 · Plumbing bot</p><h3>API Broker And Fixer</h3></div></div>
+    <h4>what it does</h4><p>Sits between the bots and the services they call. It routes requests and retries or repairs them when a call fails.</p>
+    <h4>how it works</h4><ol><li>Receives a request from a bot.</li><li>Chooses a working route to the service.</li><li>Retries and repairs a failed call.</li><li>Hands the answer back.</li></ol>
+    <p class="bstat soon">stats: <b>tracking soon</b></p>
+  </div>
 </article>
-<article class="bot glass rv" id="bot-trader">
-  <div><p class="kicker violet">09 · Execution bot</p><h3>Trader</h3>
-  <h4 style="margin-top:18px">What it does</h4><p>The execution worker that turns a chosen plan into orders, inside limits the owner sets.</p></div>
-  <div><h4>How it works</h4><ol class="pipe"><li>Takes a plan with size limits.</li><li>Checks the limits before every order.</li><li>Places and tracks the orders.</li><li>Hands results back to the desk.</li></ol></div>
-  <div data-bot-stats="trader" data-nostats><h4>Stats</h4><p class="meta">Loading…</p></div>
+<article class="win bot" id="bot-trader">
+  <div class="tb"><span>09_trader.exe</span><i aria-hidden="true">_ □ x</i></div>
+  <div class="wb">
+    <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#botchan"/></svg><div><p class="tag">09 · Execution bot</p><h3>Trader</h3></div></div>
+    <h4>what it does</h4><p>The execution worker that turns a chosen plan into orders, inside limits the owner sets.</p>
+    <h4>how it works</h4><ol><li>Takes a plan with size limits.</li><li>Checks the limits before every order.</li><li>Places and tracks the orders.</li><li>Hands results back to the desk.</li></ol>
+    <p class="bstat soon">stats: <b>tracking soon</b></p>
+  </div>
 </article>
+  </div>
 </div></section>
 
-<section id="film" class="band-dark"><div class="wrap film-grid">
-  <div class="film-copy rv"><p class="kicker">Inside the desk</p><h2>Watch it work</h2><p class="lede">Silent loops from the StaRK lab. They show the look of the desk, not a live fill.</p></div>
-  <div class="film-media">
-    <div class="screen rv" data-tilt="3"><video data-lazy muted playsinline loop preload="none" poster="brand/01-hero.jpg" aria-label="Silent loop of the desk"><source data-src="brand/deck.mp4" type="video/mp4" /></video></div>
-    <div class="phone rv" data-tilt="8">
-      <img src="brand/lab.jpg" width="840" height="1492" loading="lazy" alt="Hands working a holographic trading desk" decoding="async" />
-      <video data-lazy muted playsinline loop preload="none" poster="brand/lab.jpg" aria-hidden="true"><source data-src="brand/lab.mp4" type="video/mp4" /></video>
-    </div>
+<section id="film"><div class="wrap">
+  <h2 class="cap sm">cctv <small>silent loops from the lab</small></h2>
+  <div class="film">
+    <div class="win"><div class="tb"><span>desk_cam.mp4</span><i aria-hidden="true">_ □ x</i></div><div class="wb nopad"><video data-lazy muted playsinline loop preload="none" poster="brand/01-hero.jpg" aria-label="Silent loop of the desk"><source data-src="brand/deck.mp4" type="video/mp4" /></video></div></div>
+    <div class="win ph"><div class="tb"><span>lab.mp4</span><i aria-hidden="true">_ □ x</i></div><div class="wb nopad"><img src="brand/lab.jpg" width="840" height="1492" loading="lazy" alt="Hands working a holographic trading desk" decoding="async" /><video data-lazy muted playsinline loop preload="none" poster="brand/lab.jpg" aria-hidden="true"><source data-src="brand/lab.mp4" type="video/mp4" /></video></div></div>
   </div>
+  <p class="note">looks like the desk, not a live fill.</p>
 </div></section>
 
 <section id="proof"><div class="wrap">
-  <div class="section-head rv"><p class="kicker gold">Proof / Results</p><h2>Two posts, two sets of numbers</h2><p class="lede">Only these figures. Each one is dated and linked to the post where it was shared.</p></div>
-  <div class="grid proof-grid">
-    <article class="proof glass rv">
-      <p class="date">OCT 17, 2026</p><h3>30 days of Arcus and Nado</h3>
-      <p class="lede" style="font-size:15px;margin-top:10px">Run automatically for 30 days.</p>
-      <ul>
-        <li><b>Arcus:</b> $26 spent for 22 points, plus Season 0 points that are not shown here.</li>
-        <li><b>Nado:</b> $93 for 52 points.</li>
-        <li><b>Total:</b> about $120.</li>
-        <li>Only $50–100 of margin was added, for testing.</li>
-      </ul>
-      <div class="est">Owner estimate of the points' value: about $500 OTC.<small>OWNER ESTIMATE, NOT A GUARANTEE</small></div>
-      <a href="https://x.com/StaRKCryptoBots/status/2111321631113216030" target="_blank" rel="noopener noreferrer">Read the Oct 17 post on X →</a>
-    </article>
-    <article class="proof glass rv">
-      <p class="date">OCT 2, 2026</p><h3>The YouTube bot shipped on its own</h3>
-      <p class="lede" style="font-size:15px;margin-top:10px">200+ videos in a week, made by the bot by itself.</p>
+  <h2 class="cap sm">proof / results <small>two posts, dated, linked</small></h2>
+  <div class="proofs">
+    <article class="win"><div class="tb"><span>oct_17_2026.post</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <p class="date">OCT 17, 2026</p><h3>30 days of arcus and nado</h3><p>run automatically for 30 days.</p>
+      <ul><li><b>arcus:</b> $26 spent for 22 points, plus Season 0 points that are not shown here.</li><li><b>nado:</b> $93 for 52 points.</li><li><b>total:</b> about $120.</li><li>only $50–100 of margin was added, for testing.</li></ul>
+      <div class="est">owner estimate of the points' value: about $500 OTC.<small>owner's own estimate · not a guarantee · not financial advice</small></div>
+      <a class="btn y" href="https://x.com/StaRKCryptoBots/status/2111321631113216030" target="_blank" rel="noopener noreferrer">read the oct 17 post on x →</a>
+    </div></article>
+    <article class="win"><div class="tb"><span>oct_02_2026.post</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <p class="date">OCT 2, 2026</p><h3>the youtube bot shipped on its own</h3><p>200+ videos in a week, made by the bot by itself.</p>
       <ul><li><b>2.2K</b> views, as posted.</li><li><b>13.2</b> watch hours, as posted.</li></ul>
-      <a href="https://x.com/StaRKCryptoBots/status/2106097394018562095" target="_blank" rel="noopener noreferrer">Read the Oct 2 post on X →</a>
-    </article>
+      <a class="btn g" href="https://x.com/StaRKCryptoBots/status/2106097394018562095" target="_blank" rel="noopener noreferrer">read the oct 2 post on x →</a>
+    </div></article>
   </div>
-  <p class="disclaimer rv"><strong>Not financial advice.</strong> These are the owner's own reported results for a short window. Past results do not predict future results. Points have no guaranteed value and may be worth nothing. Do your own research.</p>
+  <p class="warn"><b>not financial advice.</b> these are the owner's own reported results for a short window. past results do not predict future results. points have no guaranteed value and may be worth nothing. do your own research.</p>
 </div></section>
 
 <section id="roadmap"><div class="wrap">
-  <div class="section-head rv"><p class="kicker">Roadmap</p><h2>Where this is going</h2><p class="lede">No dates promised. Order shows priority.</p></div>
-  <ol class="road">
-    <li class="glass rv" data-s="done"><small>Done</small><b>30-day Arcus and Nado run</b><span>Automatic, with results posted and linked.</span></li>
-    <li class="glass rv" data-s="done"><small>Done</small><b>YouTube bot shipping on its own</b><span>200+ videos in its first week.</span></li>
-    <li class="glass rv" data-s="now"><small>Now</small><b>Live desks stats</b><span>A script refreshes data/stats.json so the cards stay current.</span></li>
-    <li class="glass rv" data-s="next"><small>Next</small><b>Stats for every desk</b><span>Lighter RH, Profit Taking and the media bots join the board.</span></li>
-    <li class="glass rv" data-s="next"><small>Next</small><b>$STARKBOT launch</b><span>The contract address is published here and on X on launch day.</span></li>
-    <li class="glass rv" data-s="later"><small>Later</small><b>More desks and bots</b><span>New venues and new helpers, once the current ones are steady.</span></li>
-  </ol>
+  <h2 class="cap sm">roadmap <small>no dates, only vibes (and order)</small></h2>
+  <div class="win"><div class="tb"><span>roadmap.md</span><i aria-hidden="true">_ □ x</i></div><div class="wb mono road">
+    <p class="done">[x] 30-day arcus + nado run, results posted and linked</p>
+    <p class="done">[x] youtube bot shipping on its own, 200+ videos in week one</p>
+    <p class="now">[~] live desks stats: a script refreshes data/stats.json</p>
+    <p>[ ] stats for every desk: lighter rh, profit taking, media bots</p>
+    <p>[ ] $STARKBOT launch: contract posted here and on x on launch day</p>
+    <p>[ ] more desks and bots, once the current ones are steady</p>
+  </div></div>
 </div></section>
 
 <section id="faq"><div class="wrap">
-  <div class="section-head rv"><p class="kicker violet">FAQ</p><h2>Questions</h2></div>
-  <div class="faq rv">
-    <details><summary>Is $STARKBOT live?</summary><p>No. It is not issued, has no price and no contract. When that changes, the address will be shown in the launch section and on @StaRKCryptoBots.</p></details>
-    <details><summary>Where do the stats come from?</summary><p>From one file, data/stats.json. The current numbers are a one-time copy of a 30-day sample, September 17 to October 17. A script is meant to refresh it later. Missing numbers show a dash.</p></details>
-    <details><summary>What does "owner-stated" mean for points?</summary><p>Points are not read from a chain by this site. They are the numbers the owner reported in the posts, so they are labeled owner-stated.</p></details>
-    <details><summary>What does "maker %" mean?</summary><p>The share of fills that came from resting orders (adding liquidity) instead of orders that took liquidity.</p></details>
-    <details><summary>Does this site show balances, PnL or wallets?</summary><p>No. It never shows wallet addresses, balances, equity or PnL, and it holds no keys.</p></details>
-    <details><summary>Is the $500 figure a promise?</summary><p>No. It is the owner's own estimate of what the points could fetch over the counter. It is not a guarantee and the points may be worth less.</p></details>
-    <details><summary>Does the site track me?</summary><p>No trackers and no third-party requests. The only thing stored is your sound on/off choice, in your browser.</p></details>
-    <details><summary>Why does the music wait?</summary><p>Browsers block sound until you interact. It starts softly after your first tap or key press, and the Sound button mutes it and remembers your choice.</p></details>
+  <h2 class="cap sm">faq <small>big brain questions</small></h2>
+  <div class="faq">
+    <details><summary>is $STARKBOT live?</summary><p>no. not issued, no price, no contract. when that changes the address shows in the launch section and on @StaRKCryptoBots.</p></details>
+    <details><summary>where do the stats come from?</summary><p>from one file, data/stats.json, a one-time copy of a 30-day sample (sept 17 to oct 17). a script is meant to refresh it. some extra numbers are owner-reported and labeled. unknown ones say "tracking soon".</p></details>
+    <details><summary>what does "owner-stated" mean?</summary><p>points and youtube numbers are not read from a chain by this site. they are what the owner reported, so they're labeled.</p></details>
+    <details><summary>what does "maker %" mean?</summary><p>the share of fills that came from resting orders (adding liquidity) instead of orders that took liquidity.</p></details>
+    <details><summary>does this site show balances, pnl or wallets?</summary><p>no. never wallets, balances, equity or pnl, and it holds no keys.</p></details>
+    <details><summary>is the $500 figure a promise?</summary><p>no. it's the owner's own estimate of what the points could fetch OTC. not a guarantee, may be worth less, may be worth nothing.</p></details>
+    <details><summary>does the site track me?</summary><p>no trackers, no third-party requests, all fonts and art self-hosted. only your sound on/off choice is saved in your browser.</p></details>
+    <details><summary>why does the music wait?</summary><p>browsers block sound until you interact. it fades in softly after your first tap or key press, and the sound button mutes it.</p></details>
+    <details><summary>is there an easter egg?</summary><p>maybe. try the konami code. or click the logo a few times. we're not telling.</p></details>
   </div>
 </div></section>
 
 <section id="risk"><div class="wrap">
-  <div class="risk rv"><p class="kicker gold">Risk disclaimer</p><h2 style="font-size:26px">Read this before anything else</h2>
+  <div class="win risk"><div class="tb"><span>READ_ME_FIRST.txt</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+    <h2>risk notice (the unfunny part)</h2>
     <ul>
-      <li>Nothing here is financial, investment, legal or tax advice, or an offer to sell or a solicitation to buy any token.</li>
-      <li>Trading and farming can lose money. Automated bots can fail, mis-fill or stop.</li>
-      <li>Points programs can change or end, and points can end up worth nothing.</li>
-      <li>Results shown are short, owner-reported windows and do not predict the future.</li>
-      <li>Crypto tokens can lose all value. Beware of fake contract addresses and impersonators. Only trust an address published on this site and on @StaRKCryptoBots.</li>
-    </ul></div>
+      <li>nothing here is financial, investment, legal or tax advice, or an offer to sell or a solicitation to buy any token.</li>
+      <li>trading and farming can lose money. automated bots can fail, mis-fill or stop.</li>
+      <li>points programs can change or end, and points can end up worth nothing.</li>
+      <li>results shown are short, owner-reported windows and do not predict the future.</li>
+      <li>crypto tokens can lose all value. beware of fake contract addresses and impersonators. only trust an address published on this site and on @StaRKCryptoBots.</li>
+    </ul>
+  </div></div>
 </div></section>
 </main>
 
-<footer class="site-foot"><div class="wrap foot">
-  <div><strong>StaRK Bots</strong><br />Not financial advice. $STARKBOT is not issued.</div>
-  <nav aria-label="Footer"><a href="desks/">Live desks</a><a href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">@StaRKCryptoBots</a><a href="https://x.com/_Starkcrypto" target="_blank" rel="me noopener noreferrer">@_Starkcrypto</a><a href="mailto:ceo@stark-bot.com">ceo@stark-bot.com</a></nav>
+<footer class="foot"><div class="wrap fgrid">
+  <div><b>stark bots</b><br />not financial advice. $STARKBOT is not issued.<br /><span class="tiny">made with spite and 0 trackers</span></div>
+  <nav aria-label="Footer"><a href="desks/">live desks</a><a href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">@StaRKCryptoBots</a><a href="https://x.com/_Starkcrypto" target="_blank" rel="me noopener noreferrer">@_Starkcrypto</a><a href="mailto:ceo@stark-bot.com">ceo@stark-bot.com</a></nav>
 </div></footer>
-<script src="js/site.js" defer></script>
+<script src="js/meme.js" defer></script>
 </body>
 </html>

@@ -7,8 +7,8 @@
 <meta name="description" content="Volume, fills, maker share, points and status for the StaRK desks, read from one file. Unpublished numbers show a dash. Not financial advice." />
 <link rel="canonical" href="https://stark-bot.com/desks/" />
 <meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#ffffff" />
-<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#14002b" />
+<meta name="color-scheme" content="dark" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="StaRK Bots" />
 <meta property="og:url" content="https://stark-bot.com/desks/" />
@@ -24,28 +24,63 @@
 <meta name="twitter:description" content="Automated desks with real, dated numbers. Not financial advice." />
 <meta name="twitter:image" content="https://stark-bot.com/brand/01-hero.jpg" />
 <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-<link rel="preload" href="../fonts/ibm-plex-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="../fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="../css/site.css" />
+<link rel="stylesheet" href="../css/meme.css" />
 <script src="../config.js"></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header"><div class="wrap bar">
-  <a class="brand" href="../"><img src="../brand/BOTS-logo-nav.png" width="64" height="64" alt="" /><span>StaRK Bots</span></a>
-  <nav class="nav" id="nav" aria-label="Primary"><a href="../#launch">$STARKBOT</a><a href="./" aria-current="page">Live desks</a><a href="../#bots">Bots</a><a href="../#proof">Results</a><a href="../#faq">FAQ</a></nav>
-  <div class="bar-actions"><button class="icon-btn" id="sound-btn" type="button" aria-pressed="true" aria-label="Mute background music"><span class="snd-dot"></span><span id="sound-label">Sound on</span></button><button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button></div>
+<a class="skip" href="#main">skip to content</a>
+<header class="hdr"><div class="bar">
+  <a class="brand" href="../" id="logo"><img src="../brand/BOTS-logo-nav.png" width="44" height="44" alt="" /><span>stark<b>bots</b>.exe</span></a>
+  <nav class="nav" id="nav" aria-label="Primary"><a href="../#launch">$starkbot</a><a href="./" aria-current="page">desks</a><a href="../#bots">bots</a><a href="../#proof">proof</a><a href="../#faq">faq</a></nav>
+  <button class="snd" id="sound-btn" type="button" aria-pressed="true" aria-label="Mute background music"><span class="dot"></span><span id="sound-label">sound on</span></button>
+  <button class="menu" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">menu</button>
 </div></header>
-<main id="main"><section class="page-top"><div class="wrap">
-  <p class="kicker">Live desks</p><h1 style="font-size:clamp(34px,7vw,60px)">The <span class="grad">desk board</span></h1>
-  <p class="lede" style="margin-top:14px">Volume, fills, maker share, points and status. Read from <a href="../data/stats.json">data/stats.json</a>. A dash means not published yet. Points are owner-stated.</p>
-  <p class="note" id="period" style="margin-top:18px">Period: —</p>
-  <div class="grid cards" id="desk-board" style="margin-top:14px"></div>
-  <div class="combined glass" id="combined"></div>
-  <p class="note" id="load-note" role="status" style="margin-top:14px">&nbsp;</p>
-  <p class="disclaimer"><strong>Not financial advice.</strong> Short owner-reported window. This site shows no wallets, balances, equity or PnL. <a href="../#bots">How each bot works</a>.</p>
-</div></section></main>
-<footer class="site-foot"><div class="wrap foot"><div>Not financial advice. $STARKBOT is not issued.</div><nav><a href="../">Home</a><a href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">@StaRKCryptoBots</a></nav></div></footer>
-<script src="../js/site.js" defer></script>
+<main id="main">
+<section id="receipts" class="pagetop"><div class="wrap">
+  <h2 class="cap sm">the receipts <small>30-day sample</small></h2>
+  <p class="note" id="period">period: 2026-09-17 to 2026-10-17 · points are owner-stated · unknown numbers say "tracking soon", we don't make stuff up</p>
+  <div class="bigstats">
+    <div class="big y"><small>combined 30d volume</small><b data-stat="vol">$1,394,172</b></div>
+    <div class="big g"><small>combined 30d fills</small><b data-stat="fills">19,809</b></div>
+    <div class="big p"><small>combined points <em>owner-stated</em></small><b data-stat="points">74</b></div>
+  </div>
+  <div class="desks">
+    <article class="win"><div class="tb"><span>arcus.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>arcus</h3><dl>
+        <div><dt>30d volume</dt><dd data-d="arcus.volume_usd">$1,135,152</dd></div>
+        <div><dt>fills</dt><dd data-d="arcus.fills">18,558</dd></div>
+        <div><dt>maker</dt><dd data-d="arcus.maker_pct">80.7%</dd></div>
+        <div><dt>points <em>owner-stated</em></dt><dd data-d="arcus.points">22</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>nado.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>nado</h3><dl>
+        <div><dt>30d volume</dt><dd data-d="nado.volume_usd">$259,020</dd></div>
+        <div><dt>fills</dt><dd data-d="nado.fills">1,251</dd></div>
+        <div><dt>maker</dt><dd data-d="nado.maker_pct">87.6%</dd></div>
+        <div><dt>points <em>owner-stated</em></dt><dd data-d="nado.points">52</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>lighter_rh.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>lighter rh</h3><dl>
+        <div><dt>trades, total</dt><dd>169</dd></div>
+        <div><dt>trades, 30 days</dt><dd>75</dd></div>
+        <div><dt>volume / points</dt><dd class="soon">tracking soon</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>profit_taking.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>profit taking</h3><dl>
+        <div><dt>take-profit sells</dt><dd>9</dd></div>
+        <div><dt>tokens watched</dt><dd>1</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>youtube.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>youtube <em>owner-stated</em></h3><dl>
+        <div><dt>views</dt><dd>6.1K</dd></div>
+        <div><dt>watch hours</dt><dd>29.2</dd></div>
+        <div><dt>subscribers</dt><dd>15</dd></div></dl></div></article>
+    <article class="win"><div class="tb"><span>the_rest.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
+      <h3>everyone else</h3><dl>
+        <div><dt>mochee &amp; yochee</dt><dd class="soon">tracking soon</dd></div>
+        <div><dt>jarvis · api fixer · trader</dt><dd class="soon">tracking soon</dd></div></dl></div></article>
+  </div>
+  <p class="note" id="load-note" role="status">figures read from <a href="../data/stats.json">data/stats.json</a>. <a href="../#bots">how each bot works</a></p>
+</div></section>
+<section><div class="wrap"><p class="warn"><b>not financial advice.</b> short owner-reported window. this site shows no wallets, balances, equity or pnl. $STARKBOT is not issued.</p></div></section>
+</main>
+<footer class="foot"><div class="wrap fgrid"><div><b>stark bots</b><br />not financial advice. $STARKBOT is not issued.</div><nav><a href="../">home</a><a href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">@StaRKCryptoBots</a></nav></div></footer>
+<script src="../js/meme.js" defer></script>
 </body>
 </html>
