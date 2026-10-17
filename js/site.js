@@ -56,11 +56,6 @@
     }
   });
 
-  // ---------- pointer glow ----------
-  $$(".card").forEach(function (c) {
-    c.addEventListener("pointermove", function (e) { var r = c.getBoundingClientRect(); c.style.setProperty("--mx", (e.clientX - r.left) + "px"); });
-  });
-
   // ---------- contract address ----------
   var PLACEHOLDER = "Coming at launch";
   function getCA() {
@@ -113,7 +108,7 @@
     if (board) {
       board.textContent = "";
       DESKS.forEach(function (m) {
-        var d = get(m.slug), c = el("article", "card glass");
+        var d = get(m.slug), c = el("article", "card");
         var h = el("div", "card-head"); var t = el("div"); t.appendChild(el("h3", null, m.name)); t.appendChild(el("div", "note", m.role));
         h.appendChild(t); h.appendChild(badge(d)); c.appendChild(h); c.appendChild(statList(d));
         var s = stamp(d.updated_at); c.appendChild(el("p", "meta", s ? "As of " + s : "No data yet"));
@@ -122,8 +117,8 @@
     }
     $$("[data-bot-stats]").forEach(function (n) {
       var d = get(n.getAttribute("data-bot-stats")); n.textContent = "";
-      var wrap = el("div"); wrap.appendChild(el("h4", null, "Stats")); n.appendChild(wrap);
-      var top = el("div", "card-head"); top.style.margin = "12px 0"; top.appendChild(badge(d)); n.appendChild(top);
+      n.appendChild(el("h4", null, "Stats"));
+      var top = el("div", "card-head"); top.appendChild(badge(d)); n.appendChild(top);
       n.appendChild(statList(d));
       if (n.hasAttribute("data-nostats")) n.appendChild(el("p", "meta", "This bot does not publish desk stats."));
     });
