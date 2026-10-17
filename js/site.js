@@ -136,6 +136,9 @@
       });
       if (num(c.points) !== null && c.points_label) comb.appendChild(el("p", "meta", "Points are " + c.points_label + "."));
     }
+    var hv = $("#hero-vol"), hf = $("#hero-fills"), cc = data.combined || {};
+    if (hv) { var v = num(cc.volume_usd); hv.textContent = v === null ? EMPTY : "$" + (v / 1e6).toFixed(2) + "M"; }
+    if (hf) hf.textContent = fmtInt(cc.fills) || EMPTY;
     var per = $("#period"), p = data.period;
     if (per) per.textContent = p && p.start && p.end ? (p.label || "Period") + ": " + p.start + " to " + p.end : "Period: " + EMPTY;
   }

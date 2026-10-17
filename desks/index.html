@@ -1,277 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Live desks · StaRK Bots</title>
-    <meta
-      name="description"
-      content="Read-only tape of the StaRK desks. Figures load from the stats file. Unpublished fields stay blank. Not financial advice."
-    />
-    <link rel="canonical" href="https://stark-bot.com/desks/" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#070604" />
-    <meta name="color-scheme" content="dark" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="StaRK Bots" />
-    <meta property="og:url" content="https://stark-bot.com/desks/" />
-    <meta property="og:title" content="Live desks · StaRK Bots" />
-    <meta
-      property="og:description"
-      content="Read-only tape of the StaRK desks. Figures load from the stats file. Unpublished fields stay blank. Not financial advice."
-    />
-    <meta property="og:image" content="https://stark-bot.com/brand/01-hero.jpg" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Live desks · StaRK Bots" />
-    <meta
-      name="twitter:description"
-      content="Read-only tape of the StaRK desks. Figures load from the stats file. Unpublished fields stay blank. Not financial advice."
-    />
-    <meta name="twitter:image" content="https://stark-bot.com/brand/01-hero.jpg" />
-
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="../assets/style-C6FWoAcT.css" />
-    <link rel="stylesheet" href="desks.css" />
-  </head>
-  <body class="live-page">
-    <a class="skip" href="#live">Skip to content</a>
-
-    <header class="site-header">
-      <div class="header-bar">
-        <a class="brand" href="../">
-          <img src="../brand/BOTS-logo-nav.png" width="64" height="64" alt="" />
-          <span>$STARKBOT</span>
-        </a>
-
-        <nav class="primary-nav" id="site-nav" aria-label="Primary">
-          <a href="../#launch">Launch</a>
-          <a href="../#feed">Timeline</a>
-          <a href="../#console">Desks</a>
-          <a href="./" aria-current="page">Live desks</a>
-          <a href="../#film">Film</a>
-          <a href="../#queue">Queue</a>
-          <a
-            href="https://x.com/StaRKCryptoBots"
-            target="_blank"
-            rel="me noopener noreferrer"
-            >@StaRKCryptoBots</a
-          >
-          <a
-            href="https://x.com/_Starkcrypto"
-            target="_blank"
-            rel="me noopener noreferrer"
-            >@_Starkcrypto</a
-          >
-          <a href="mailto:ceo@stark-bot.com">ceo@stark-bot.com</a>
-        </nav>
-
-        <div class="header-links">
-          <a href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">@StaRKCryptoBots</a>
-          <a href="https://x.com/_Starkcrypto" target="_blank" rel="me noopener noreferrer">@_Starkcrypto</a>
-        </div>
-
-        <div class="header-tools">
-          <button
-            type="button"
-            class="menu-toggle"
-            id="menu-toggle"
-            aria-expanded="false"
-            aria-controls="site-nav"
-          >
-            Menu
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <p>
-          <span class="tick-name">Live desks</span>
-          <span>stats file</span>
-          <span>blanks stay blank</span>
-          <span>nfa</span>
-          <span>no signed trades</span>
-        </p>
-        <p>
-          <span class="tick-name">Live desks</span>
-          <span>stats file</span>
-          <span>blanks stay blank</span>
-          <span>nfa</span>
-          <span>no signed trades</span>
-        </p>
-      </div>
-    </div>
-
-    <main>
-      <section class="section" id="live">
-        <div class="section-head">
-          <p class="kicker kicker-green">Live</p>
-          <h1>Live desks</h1>
-          <p class="section-lede">
-            Read-only tape of the house desks. Every figure is loaded from the
-            stats file. A blank mark is unpublished, not zero. Nothing here
-            signs a trade.
-          </p>
-        </div>
-
-        <p class="live-meta">
-          Last updated
-          <time id="updated-at">—</time>
-        </p>
-        <p class="updates-soon" id="updates-soon">Updates soon.</p>
-        <p class="updates-soon" id="load-note" hidden>Stats file did not load.</p>
-        <noscript>
-          <p class="updates-soon">JavaScript is off, so this tape is showing blanks.</p>
-        </noscript>
-
-        <div
-          class="live-board"
-          id="desk-board"
-          data-stats="../data/stats.json"
-          aria-live="polite"
-        >
-          <article class="live-card" data-desk="Arcus">
-            <div class="live-card-top">
-              <p class="idx">01</p>
-              <p class="live-status is-blank">—</p>
-            </div>
-            <h2>Arcus</h2>
-            <p class="live-role">Perp volume farm</p>
-            <div class="metric-grid">
-              <div><p>Volume 7d</p><p>—</p></div>
-              <div><p>Volume total</p><p>—</p></div>
-              <div><p>PnL 7d</p><p>—</p></div>
-              <div><p>Trades 7d</p><p>—</p></div>
-            </div>
-            <p class="desk-updated">Updated <time>—</time></p>
-          </article>
-
-          <article class="live-card" data-desk="Nado">
-            <div class="live-card-top">
-              <p class="idx">02</p>
-              <p class="live-status is-blank">—</p>
-            </div>
-            <h2>Nado</h2>
-            <div class="metric-grid">
-              <div><p>Volume 7d</p><p>—</p></div>
-              <div><p>Volume total</p><p>—</p></div>
-              <div><p>PnL 7d</p><p>—</p></div>
-              <div><p>Trades 7d</p><p>—</p></div>
-            </div>
-            <p class="desk-updated">Updated <time>—</time></p>
-          </article>
-
-          <article class="live-card" data-desk="Lighter RH">
-            <div class="live-card-top">
-              <p class="idx">03</p>
-              <p class="live-status is-blank">—</p>
-            </div>
-            <h2>Lighter RH</h2>
-            <div class="metric-grid">
-              <div><p>Volume 7d</p><p>—</p></div>
-              <div><p>Volume total</p><p>—</p></div>
-              <div><p>PnL 7d</p><p>—</p></div>
-              <div><p>Trades 7d</p><p>—</p></div>
-            </div>
-            <p class="desk-updated">Updated <time>—</time></p>
-          </article>
-
-          <article class="live-card" data-desk="Profit Taking">
-            <div class="live-card-top">
-              <p class="idx">04</p>
-              <p class="live-status is-blank">—</p>
-            </div>
-            <h2>Profit Taking</h2>
-            <p class="live-role">Multi-chain 2× take-profit</p>
-            <div class="metric-grid">
-              <div><p>Volume 7d</p><p>—</p></div>
-              <div><p>Volume total</p><p>—</p></div>
-              <div><p>PnL 7d</p><p>—</p></div>
-              <div><p>Trades 7d</p><p>—</p></div>
-            </div>
-            <p class="desk-updated">Updated <time>—</time></p>
-          </article>
-
-          <article class="live-card" data-desk="Youtube">
-            <div class="live-card-top">
-              <p class="idx">05</p>
-              <p class="live-status is-blank">—</p>
-            </div>
-            <h2>Youtube</h2>
-            <p class="live-role">Media</p>
-            <div class="metric-grid">
-              <div><p>Volume 7d</p><p>—</p></div>
-              <div><p>Volume total</p><p>—</p></div>
-              <div><p>PnL 7d</p><p>—</p></div>
-              <div><p>Trades 7d</p><p>—</p></div>
-            </div>
-            <p class="desk-updated">Updated <time>—</time></p>
-          </article>
-
-          <article class="live-card" data-desk="Mochee">
-            <div class="live-card-top">
-              <p class="idx">06</p>
-              <p class="live-status is-blank">—</p>
-            </div>
-            <h2>Mochee</h2>
-            <p class="live-role">Media</p>
-            <div class="metric-grid">
-              <div><p>Volume 7d</p><p>—</p></div>
-              <div><p>Volume total</p><p>—</p></div>
-              <div><p>PnL 7d</p><p>—</p></div>
-              <div><p>Trades 7d</p><p>—</p></div>
-            </div>
-            <p class="desk-updated">Updated <time>—</time></p>
-          </article>
-
-          <article class="live-card" data-desk="Yochee">
-            <div class="live-card-top">
-              <p class="idx">07</p>
-              <p class="live-status is-blank">—</p>
-            </div>
-            <h2>Yochee</h2>
-            <p class="live-role">Media</p>
-            <div class="metric-grid">
-              <div><p>Volume 7d</p><p>—</p></div>
-              <div><p>Volume total</p><p>—</p></div>
-              <div><p>PnL 7d</p><p>—</p></div>
-              <div><p>Trades 7d</p><p>—</p></div>
-            </div>
-            <p class="desk-updated">Updated <time>—</time></p>
-          </article>
-        </div>
-
-        <aside class="disclaimer">
-          <p class="disclaimer-kicker">Not financial advice</p>
-          <p>
-            Live desks are a read-only tape of the stats file. Figures are not
-            a promise of profit. Nothing on this page is an offer to sell, or a
-            solicitation to buy, any token. Nothing here signs a trade.
-          </p>
-        </aside>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-top">
-        <a class="follow" href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">Follow @StaRKCryptoBots</a>
-        <a class="follow follow-ghost" href="https://x.com/_Starkcrypto" target="_blank" rel="me noopener noreferrer">@_Starkcrypto</a>
-      </div>
-      <p class="footer-line">StaRKCrypto · @_Starkcrypto · NFA · $STARKBOT is not issued</p>
-      <p class="footer-contact">
-        <a href="mailto:ceo@stark-bot.com">ceo@stark-bot.com</a>
-      </p>
-      <p class="footer-disclaimer">
-        Not financial advice. $STARKBOT is not issued. Nothing on this site is
-        an offer to sell or a solicitation to buy. No price and no contract are
-        shown before launch. Live desks read the stats file. Nothing here signs
-        a trade.
-      </p>
-    </footer>
-
-    <script src="desks.js"></script>
-  </body>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Live desks · StaRK Bots</title>
+<meta name="description" content="Volume, fills, maker share, points and status for the StaRK desks, read from one file. Unpublished numbers show a dash. Not financial advice." />
+<link rel="canonical" href="https://stark-bot.com/desks/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#04080d" />
+<meta name="color-scheme" content="dark" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="StaRK Bots" />
+<meta property="og:url" content="https://stark-bot.com/desks/" />
+<meta property="og:title" content="Live desks · StaRK Bots" />
+<meta property="og:description" content="Volume, fills, maker share, points and status for the StaRK desks. Unpublished numbers show a dash." />
+<meta property="og:image" content="https://stark-bot.com/brand/01-hero.jpg" />
+<meta property="og:image:width" content="1600" />
+<meta property="og:image:height" content="900" />
+<meta property="og:image:alt" content="Hands over a glass trading desk, the StaRK Bots hero still." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@StaRKCryptoBots" />
+<meta name="twitter:title" content="Live desks · StaRK Bots" />
+<meta name="twitter:description" content="Automated desks with real, dated numbers. Not financial advice." />
+<meta name="twitter:image" content="https://stark-bot.com/brand/01-hero.jpg" />
+<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+<link rel="preload" href="../fonts/ibm-plex-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="../css/site.css" />
+<script src="../config.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap bar">
+  <a class="brand" href="../"><img src="../brand/BOTS-logo-nav.png" width="64" height="64" alt="" /><span>StaRK Bots</span></a>
+  <nav class="nav" id="nav" aria-label="Primary"><a href="../#launch">$STARKBOT</a><a href="./" aria-current="page">Live desks</a><a href="../#bots">Bots</a><a href="../#proof">Results</a><a href="../#faq">FAQ</a></nav>
+  <div class="bar-actions"><button class="icon-btn" id="sound-btn" type="button" aria-pressed="true" aria-label="Mute background music"><span class="snd-dot"></span><span id="sound-label">Sound on</span></button><button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button></div>
+</div></header>
+<main id="main"><section class="page-top"><div class="wrap">
+  <p class="kicker">Live desks</p><h1 style="font-size:clamp(34px,7vw,60px)">The <span class="grad">desk board</span></h1>
+  <p class="lede" style="margin-top:14px">Volume, fills, maker share, points and status. Read from <a href="../data/stats.json">data/stats.json</a>. A dash means not published yet. Points are owner-stated.</p>
+  <p class="note" id="period" style="margin-top:18px">Period: —</p>
+  <div class="grid cards" id="desk-board" style="margin-top:14px"></div>
+  <div class="combined glass" id="combined"></div>
+  <p class="note" id="load-note" role="status" style="margin-top:14px">&nbsp;</p>
+  <p class="disclaimer"><strong>Not financial advice.</strong> Short owner-reported window. This site shows no wallets, balances, equity or PnL. <a href="../#bots">How each bot works</a>.</p>
+</div></section></main>
+<footer><div class="wrap foot"><div>Not financial advice. $STARKBOT is not issued.</div><nav><a href="../">Home</a><a href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">@StaRKCryptoBots</a></nav></div></footer>
+<script src="../js/site.js" defer></script>
+</body>
 </html>
