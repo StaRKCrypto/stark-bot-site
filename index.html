@@ -7,8 +7,8 @@
 <meta name="description" content="StaRK Bots run automated volume desks and a video bot. See 30 days of real Arcus and Nado numbers, how each bot works, and the $STARKBOT launch. Not financial advice." />
 <link rel="canonical" href="https://stark-bot.com/" />
 <meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#04080d" />
-<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="color-scheme" content="light" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="StaRK Bots" />
 <meta property="og:url" content="https://stark-bot.com/" />
@@ -48,23 +48,31 @@
 
 <main id="main">
 <section class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true"><img src="brand/01-hero.jpg" width="1600" height="900" alt="" fetchpriority="low" decoding="async" /><span class="orb a"></span><span class="orb b"></span><span class="orb c"></span></div>
+  <div class="hero-bg" aria-hidden="true"><span class="blob a" data-par="-0.12"></span><span class="blob b" data-par="0.1"></span><span class="blob c" data-par="-0.05"></span><span class="grid-fade"></span></div>
   <div class="wrap hero-grid">
-    <div>
-      <p class="kicker rv">Automated desks · 30 days on the record</p>
+    <div class="hero-copy">
+      <p class="kicker rv"><span class="pulse"></span>Automated desks · 30 days on the record</p>
       <h1 class="rv">Bots that work.<br /><span class="grad">Numbers you can check.</span></h1>
       <p class="lede rv">StaRK Bots run volume desks and a video channel by themselves. Every figure here is dated and linked to its post. $STARKBOT is the coin for the desks, and it is not issued yet.</p>
-      <div class="hero-cta rv"><a class="btn primary" href="#proof">See the results</a><a class="btn" href="#launch">$STARKBOT launch</a><a class="btn" href="#bots">Meet the bots</a></div>
+      <div class="hero-cta rv"><a class="btn primary" href="#proof">See the results</a><a class="btn" href="#launch">$STARKBOT launch</a><a class="btn ghost" href="#bots">Meet the bots <span aria-hidden="true">→</span></a></div>
     </div>
-    <div class="hero-stage rv" aria-hidden="false">
-      <div class="phone">
-        <img src="brand/lab.jpg" width="840" height="1492" alt="Hands working a holographic trading desk" decoding="async" />
-        <video data-lazy muted playsinline loop preload="none" poster="brand/lab.jpg" aria-hidden="true"><source data-src="brand/lab.mp4" type="video/mp4" /></video>
+    <div class="hero-stage rv">
+      <div class="coin-box" id="coin-box" data-par="0.05">
+        <span class="ring r1" aria-hidden="true"></span><span class="ring r2" aria-hidden="true"></span>
+        <img class="coin-still" src="brand/hero-coin.webp" width="1100" height="1100" alt="A 3D hexagonal StaRK coin with an S on its face" fetchpriority="high" decoding="async" />
+        <span class="coin-shadow" aria-hidden="true"></span>
       </div>
-      <div class="float-card glass one"><small>30d volume</small><b id="hero-vol">—</b></div>
-      <div class="float-card glass two"><small>30d fills</small><b id="hero-fills">—</b></div>
+      <p class="coin-hint" aria-hidden="true">Drag to spin</p>
+      <div class="float-card one"><small>30d volume</small><b data-stat="vol">—</b></div>
+      <div class="float-card two"><small>30d fills</small><b data-stat="fills">—</b></div>
     </div>
   </div>
+  <div class="wrap"><div class="statband rv" aria-label="30-day combined numbers">
+    <div><small>30-day volume</small><strong data-stat="vol">—</strong></div>
+    <div><small>30-day fills</small><strong data-stat="fills">—</strong></div>
+    <div><small>Points <em>owner-stated</em></small><strong data-stat="points">—</strong></div>
+    <div><small>Bots</small><strong><span class="n" data-count="9" data-kind="int">9</span></strong></div>
+  </div></div>
 </section>
 <div class="ticker" aria-hidden="true"><div class="ticker-track">
   <span>Arcus + Nado, 30 days</span><span>Mostly maker fills</span><span>Run automatically</span><span>200+ videos in a week</span><span>Not financial advice</span><span>No keys, no balances on this site</span>
@@ -155,9 +163,15 @@
 </article>
 </div></section>
 
-<section id="film"><div class="wrap">
-  <div class="glass rv" style="overflow:hidden;border-radius:var(--r)"><video data-lazy muted playsinline loop preload="none" poster="brand/01-hero.jpg" aria-label="Silent loop of the desk" style="width:100%;aspect-ratio:16/9;object-fit:cover"><source data-src="brand/deck.mp4" type="video/mp4" /></video></div>
-  <p class="note" style="margin-top:10px">Silent loop of the desk. Not a live fill.</p>
+<section id="film" class="band-dark"><div class="wrap film-grid">
+  <div class="film-copy rv"><p class="kicker">Inside the desk</p><h2>Watch it work</h2><p class="lede">Silent loops from the StaRK lab. They show the look of the desk, not a live fill.</p></div>
+  <div class="film-media">
+    <div class="screen rv" data-tilt="3"><video data-lazy muted playsinline loop preload="none" poster="brand/01-hero.jpg" aria-label="Silent loop of the desk"><source data-src="brand/deck.mp4" type="video/mp4" /></video></div>
+    <div class="phone rv" data-tilt="8">
+      <img src="brand/lab.jpg" width="840" height="1492" loading="lazy" alt="Hands working a holographic trading desk" decoding="async" />
+      <video data-lazy muted playsinline loop preload="none" poster="brand/lab.jpg" aria-hidden="true"><source data-src="brand/lab.mp4" type="video/mp4" /></video>
+    </div>
+  </div>
 </div></section>
 
 <section id="proof"><div class="wrap">
@@ -223,8 +237,8 @@
 </div></section>
 </main>
 
-<footer><div class="wrap foot">
-  <div><strong style="color:var(--ink)">StaRK Bots</strong><br />Not financial advice. $STARKBOT is not issued.</div>
+<footer class="site-foot"><div class="wrap foot">
+  <div><strong>StaRK Bots</strong><br />Not financial advice. $STARKBOT is not issued.</div>
   <nav aria-label="Footer"><a href="desks/">Live desks</a><a href="https://x.com/StaRKCryptoBots" target="_blank" rel="me noopener noreferrer">@StaRKCryptoBots</a><a href="https://x.com/_Starkcrypto" target="_blank" rel="me noopener noreferrer">@_Starkcrypto</a><a href="mailto:ceo@stark-bot.com">ceo@stark-bot.com</a></nav>
 </div></footer>
 <script src="js/site.js" defer></script>

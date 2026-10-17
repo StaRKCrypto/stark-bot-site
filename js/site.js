@@ -36,6 +36,10 @@
   }
 
   // ---------- reveal ----------
+  $$(".rv").forEach(function (n) {
+    var sib = $$(":scope > .rv", n.parentNode), i = sib.indexOf(n);
+    if (i > 0 && sib.length > 1) n.style.setProperty("--d", Math.min(i, 6) * 70 + "ms");
+  });
   var rv = $$(".rv");
   if ("IntersectionObserver" in window && !reduce) {
     var io = new IntersectionObserver(function (es) {
@@ -54,11 +58,6 @@
       var vo = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { go(); vo.disconnect(); } }); }, { rootMargin: "200px" });
       vo.observe(v);
     }
-  });
-
-  // ---------- pointer glow ----------
-  $$(".card").forEach(function (c) {
-    c.addEventListener("pointermove", function (e) { var r = c.getBoundingClientRect(); c.style.setProperty("--mx", (e.clientX - r.left) + "px"); });
   });
 
   // ---------- contract address ----------
@@ -83,18 +82,23 @@
   }
 
   // ---------- stats ----------
+  function fmtKind(k, v) { return k === "usd" ? fmtUsd(v) : k === "usdM" ? "$" + (v / 1e6).toFixed(2) + "M" : k === "pct" ? fmtPct(v) : fmtInt(v); }
+  function numNode(tag, cls, kind, v) {
+    var n = el(tag, cls, fmtKind(kind, v)); n.setAttribute("data-count", String(v)); n.setAttribute("data-kind", kind); return n;
+  }
   function statList(d, withStatus) {
     var dl = el("dl", "stat-list");
     var rows = [
-      ["Volume", fmtUsd(d.volume_usd)],
-      ["Fills", fmtInt(d.fills)],
-      ["Maker %", fmtPct(d.maker_pct)],
-      ["Points", fmtInt(d.points), num(d.points) !== null && d.points_label ? String(d.points_label) : null]
+      ["Volume", "usd", d.volume_usd],
+      ["Fills", "int", d.fills],
+      ["Maker %", "pct", d.maker_pct],
+      ["Points", "int", d.points, num(d.points) !== null && d.points_label ? String(d.points_label) : null]
     ];
     rows.forEach(function (r) {
       var w = el("div"); w.appendChild(el("dt", null, r[0]));
-      var dd = el("dd", r[1] === null ? "dash" : "", r[1] === null ? EMPTY : r[1]);
-      if (r[2]) dd.appendChild(el("span", "sub", r[2]));
+      var dd = el("dd", num(r[2]) === null ? "dash" : "");
+      if (num(r[2]) === null) dd.textContent = EMPTY; else dd.appendChild(numNode("span", "n", r[1], r[2]));
+      if (r[3]) dd.appendChild(el("span", "sub", r[3]));
       w.appendChild(dd); dl.appendChild(w);
     });
     return dl;
@@ -131,16 +135,21 @@
     var comb = $("#combined");
     if (comb) {
       var c = data.combined || {}; comb.textContent = "";
-      [["Combined volume", fmtUsd(c.volume_usd)], ["Combined fills", fmtInt(c.fills)], ["Combined points", fmtInt(c.points)]].forEach(function (r) {
-        var w = el("div"); w.appendChild(el("small", null, r[0])); w.appendChild(el("strong", r[1] === null ? "dash" : "", r[1] === null ? EMPTY : r[1])); comb.appendChild(w);
+      [["Combined volume", "usd", c.volume_usd], ["Combined fills", "int", c.fills], ["Combined points", "int", c.points]].forEach(function (r) {
+        var w = el("div"); w.appendChild(el("small", null, r[0]));
+        w.appendChild(num(r[2]) === null ? el("strong", "dash", EMPTY) : numNode("strong", "", r[1], r[2])); comb.appendChild(w);
       });
       if (num(c.points) !== null && c.points_label) comb.appendChild(el("p", "meta", "Points are " + c.points_label + "."));
     }
-    var hv = $("#hero-vol"), hf = $("#hero-fills"), cc = data.combined || {};
-    if (hv) { var v = num(cc.volume_usd); hv.textContent = v === null ? EMPTY : "$" + (v / 1e6).toFixed(2) + "M"; }
-    if (hf) hf.textContent = fmtInt(cc.fills) || EMPTY;
+    var cc = data.combined || {};
+    $$("[data-stat]").forEach(function (n) {
+      var k = n.getAttribute("data-stat"), map = { vol: ["usdM", cc.volume_usd], fills: ["int", cc.fills], points: ["int", cc.points] }[k];
+      if (!map || num(map[1]) === null) { n.textContent = EMPTY; n.removeAttribute("data-count"); return; }
+      n.textContent = fmtKind(map[0], map[1]); n.setAttribute("data-count", String(map[1])); n.setAttribute("data-kind", map[0]);
+    });
     var per = $("#period"), p = data.period;
     if (per) per.textContent = p && p.start && p.end ? (p.label || "Period") + ": " + p.start + " to " + p.end : "Period: " + EMPTY;
+    if (window.__fx) window.__fx();
   }
 
   var needs = $("#desk-board") || $$("[data-bot-stats]").length;
@@ -195,5 +204,87 @@
       if (!audio) return;
       if (document.hidden) audio.pause(); else if (wantOn && started) { audio.play().catch(function () {}); }
     });
+  }
+
+  // ---------- effects: header, progress, parallax, counters, tilt, magnetic, 3D hero ----------
+  var fine = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var header = $(".site-header"), bar = document.createElement("div");
+  bar.className = "progress"; bar.setAttribute("aria-hidden", "true"); document.body.appendChild(bar);
+  var pars = $$("[data-par]"), ticking = false;
+  function onScroll() {
+    ticking = false;
+    var y = window.pageYOffset || 0, max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    bar.style.transform = "scaleX(" + Math.min(1, y / max).toFixed(4) + ")";
+    if (header) header.classList.toggle("scrolled", y > 8);
+    if (!reduce && y < window.innerHeight * 3) pars.forEach(function (n) {
+      var r = n.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > window.innerHeight + 200) return;
+      var mid = r.top + r.height / 2 - window.innerHeight / 2;
+      n.style.setProperty("--py", (mid * parseFloat(n.getAttribute("data-par"))).toFixed(1) + "px");
+    });
+    if (!reduce) pars.forEach(function () {});
+  }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  window.addEventListener("resize", onScroll); onScroll();
+
+  // active nav link
+  var navLinks = $$(".nav a[href^='#']");
+  if (navLinks.length && "IntersectionObserver" in window) {
+    var secs = navLinks.map(function (a) { return $(a.getAttribute("href")); }).filter(Boolean);
+    var so = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) navLinks.forEach(function (a) { a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id); }); });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    secs.forEach(function (n) { so.observe(n); });
+  }
+
+  // animated counters
+  var cio = ("IntersectionObserver" in window && !reduce) ? new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { cio.unobserve(e.target); countUp(e.target); } });
+  }, { threshold: 0.3 }) : null;
+  function countUp(n) {
+    var v = parseFloat(n.getAttribute("data-count")), k = n.getAttribute("data-kind"), t0 = performance.now(), D = 1400;
+    if (!isFinite(v)) return;
+    (function step(now) {
+      var p = Math.min(1, (now - t0) / D), e = 1 - Math.pow(1 - p, 4);
+      n.textContent = fmtKind(k, k === "pct" ? v * e : Math.round(v * e)); if (p < 1) requestAnimationFrame(step); else n.textContent = fmtKind(k, v);
+    })(t0);
+  }
+  // tilt cards
+  function tilt(n) {
+    if (n.__tilt) return; n.__tilt = 1;
+    var max = parseFloat(n.getAttribute("data-tilt")) || 5, sh = el("span", "sheen"); sh.setAttribute("aria-hidden", "true"); n.appendChild(sh);
+    n.addEventListener("pointermove", function (e) {
+      if (e.pointerType === "touch") return;
+      var r = n.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      n.style.setProperty("--ry", ((px - 0.5) * 2 * max).toFixed(2) + "deg"); n.style.setProperty("--rx", ((0.5 - py) * 2 * max).toFixed(2) + "deg");
+      n.style.setProperty("--mx", (px * 100).toFixed(1) + "%"); n.style.setProperty("--my", (py * 100).toFixed(1) + "%");
+      n.classList.add("tilting"); n.classList.remove("tilt-rest");
+    });
+    n.addEventListener("pointerleave", function () { n.classList.remove("tilting"); n.classList.add("tilt-rest"); n.style.setProperty("--rx", "0deg"); n.style.setProperty("--ry", "0deg"); });
+  }
+  function fx() {
+    if (cio) $$("[data-count]").forEach(function (n) { if (!n.__c) { n.__c = 1; cio.observe(n); } });
+    if (fine && !reduce) $$(".card,.proof,.launch-card,.road li,.bot,.facts li,[data-tilt]").forEach(function (n) { if (!n.hasAttribute("data-tilt")) n.setAttribute("data-tilt", n.matches(".bot,.launch-card") ? "1.6" : "4"); tilt(n); });
+  }
+  window.__fx = fx; fx();
+  // magnetic buttons
+  if (fine && !reduce) $$(".btn.primary,.btn:not([disabled])").forEach(function (b) {
+    b.addEventListener("pointermove", function (e) { var r = b.getBoundingClientRect(); b.style.transform = "translate(" + ((e.clientX - r.left - r.width / 2) * 0.14).toFixed(1) + "px," + ((e.clientY - r.top - r.height / 2) * 0.22 - 2).toFixed(1) + "px)"; });
+    b.addEventListener("pointerleave", function () { b.style.transform = ""; });
+  });
+
+  // 3D hero coin (Three.js, self-hosted). Falls back to the static HD image.
+  var box = $("#coin-box");
+  function hasGL() { try { var c = document.createElement("canvas"); return !!(window.WebGLRenderingContext && (c.getContext("webgl2") || c.getContext("webgl"))); } catch (e) { return false; } }
+  if (box && !reduce && !lowData && hasGL()) {
+    var load = function () {
+      var sc = document.createElement("script"); sc.src = base + "js/vendor/starkcoin.js";
+      sc.onload = function () {
+        var go = function () { try { window.StarkCoin.init(box); box.classList.add("gl"); } catch (e) { box.classList.remove("gl"); } };
+        if (document.fonts && document.fonts.load) document.fonts.load("700 64px 'IBM Plex Sans'").then(go, go); else go();
+      };
+      document.head.appendChild(sc);
+    };
+    if ("requestIdleCallback" in window) requestIdleCallback(load, { timeout: 1500 }); else setTimeout(load, 300);
   }
 })();

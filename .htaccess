@@ -1,6 +1,7 @@
 AddType video/mp4 .mp4
 AddType audio/mpeg .mp3
 AddType image/svg+xml .svg
+AddType image/webp .webp
 
 <IfModule mod_expires.c>
   ExpiresActive On
@@ -9,6 +10,7 @@ AddType image/svg+xml .svg
   ExpiresByType image/svg+xml "access plus 30 days"
   ExpiresByType image/jpeg "access plus 30 days"
   ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
   ExpiresByType video/mp4 "access plus 30 days"
   ExpiresByType audio/mpeg "access plus 7 days"
 </IfModule>
