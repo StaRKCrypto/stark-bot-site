@@ -1,0 +1,83 @@
+{
+  "updated_at": "2026-10-17T00:00:00+05:30",
+  "period": {
+    "label": "30-day sample",
+    "start": "2026-09-17",
+    "end": "2026-10-17"
+  },
+  "note": "One-time seed copy. A script refreshes this file later. Points are owner-stated.",
+  "combined": {
+    "volume_usd": 1394172,
+    "fills": 19809,
+    "points": 74,
+    "points_label": "owner-stated"
+  },
+  "desks": [
+    {
+      "name": "Arcus",
+      "slug": "arcus",
+      "status": null,
+      "volume_usd": 1135152,
+      "fills": 18558,
+      "maker_pct": 80.7,
+      "points": 22,
+      "points_label": "owner-stated",
+      "updated_at": "2026-10-17"
+    },
+    {
+      "name": "Nado",
+      "slug": "nado",
+      "status": null,
+      "volume_usd": 259020,
+      "fills": 1251,
+      "maker_pct": 87.6,
+      "points": 52,
+      "points_label": "owner-stated",
+      "updated_at": "2026-10-17"
+    },
+    {
+      "name": "Lighter RH",
+      "slug": "lighter-rh",
+      "status": null,
+      "volume_usd": null,
+      "fills": null,
+      "maker_pct": null,
+      "points": null,
+      "points_label": null,
+      "updated_at": null
+    },
+    {
+      "name": "Profit Taking",
+      "slug": "profit-taking",
+      "status": null,
+      "volume_usd": null,
+      "fills": null,
+      "maker_pct": null,
+      "points": null,
+      "points_label": null,
+      "updated_at": null
+    },
+    {
+      "name": "Youtube",
+      "slug": "youtube",
+      "status": null,
+      "volume_usd": null,
+      "fills": null,
+      "maker_pct": null,
+      "points": null,
+      "points_label": null,
+      "updated_at": null
+    },
+    {
+      "name": "Mochee and Yochee",
+      "slug": "mochee-yochee",
+      "status": null,
+      "volume_usd": null,
+      "fills": null,
+      "maker_pct": null,
+      "points": null,
+      "points_label": null,
+      "updated_at": null
+    }
+  ]
+}
