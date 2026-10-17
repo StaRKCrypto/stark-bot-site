@@ -3,9 +3,9 @@
 stark-bot.com static site (GitHub Pages from `main` root, `CNAME` = stark-bot.com). Plain HTML, CSS and JS. No build step, no trackers, no external requests.
 
 ## Layout
-- `index.html` home: hero, $STARKBOT launch, live desks, bot details, proof, roadmap, FAQ, risk.
+- `index.html` home: meme/CT style: hero, $STARKBOT launch, receipts, nine bot cards, proof, roadmap, FAQ, risk. Easter eggs: konami code, logo x5, random popups.
 - `desks/index.html` the full desk board.
-- `css/site.css`, `js/site.js`, `fonts/` (self-hosted IBM Plex).
+- `css/meme.css`, `js/meme.js`, `img/doodles.svg` (original SVG doodles), `fonts/` (self-hosted IBM Plex).
 - `js/vendor/starkcoin.js` the 3D hero coin: three.js r186 (MIT, see `LICENSE-three.txt`) bundled with `tools/src/coin.js`. It is lazy-loaded only when WebGL works and reduced motion is off. Otherwise the page shows `brand/hero-coin.webp`, a static HD render of the same coin. `tools/build-coin.sh` rebuilds the bundle; the site itself has no build step.
 - `config.js` the only place the contract address is set. Empty shows "Coming at launch" and keeps Copy off.
 - `brand/` logo, images, videos and `glass.mp3` (the existing background music).
@@ -24,4 +24,4 @@ Never add secrets, keys, wallet addresses, balances, equity or PnL, or any cost-
 Validate: `python3 -m json.tool data/stats.json >/dev/null`.
 
 ## Music
-`js/site.js` plays `brand/glass.mp3` only after the first user interaction, with a slow fade to a low volume. The header Sound button mutes it and saves the choice in `localStorage` (`stark-sound`).
+`js/meme.js` plays `brand/glass.mp3` only after the first user interaction, with a slow fade to a low volume. The header Sound button mutes it and saves the choice in `localStorage` (`stark-sound`).
