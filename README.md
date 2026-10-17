@@ -6,6 +6,7 @@ stark-bot.com static site (GitHub Pages from `main` root, `CNAME` = stark-bot.co
 - `index.html` home: hero, $STARKBOT launch, live desks, bot details, proof, roadmap, FAQ, risk.
 - `desks/index.html` the full desk board.
 - `css/site.css`, `js/site.js`, `fonts/` (self-hosted IBM Plex).
+- `js/vendor/starkcoin.js` the 3D hero coin: three.js r186 (MIT, see `LICENSE-three.txt`) bundled with `tools/src/coin.js`. It is lazy-loaded only when WebGL works and reduced motion is off. Otherwise the page shows `brand/hero-coin.webp`, a static HD render of the same coin. `tools/build-coin.sh` rebuilds the bundle; the site itself has no build step.
 - `config.js` the only place the contract address is set. Empty shows "Coming at launch" and keeps Copy off.
 - `brand/` logo, images, videos and `glass.mp3` (the existing background music).
 
