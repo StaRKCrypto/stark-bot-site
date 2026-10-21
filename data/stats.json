@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-10-17T00:00:00+05:30",
+  "updated_at": "2026-10-21T19:45:00+05:30",
   "period": {
-    "label": "30-day sample",
-    "start": "2026-09-17",
-    "end": "2026-10-17"
+    "label": "45-day window",
+    "start": "2026-09-06",
+    "end": "2026-10-21"
   },
-  "note": "One-time seed copy. A script refreshes this file later. Points are owner-stated.",
+  "note": "Arcus and Nado: 45-day window 2026-09-06 to 2026-10-21, from venue fill/order history (maker % volume-weighted). Lighter RH: lifetime trade count. Points are owner-stated (30-day, as of 2026-10-17).",
   "combined": {
-    "volume_usd": 1394172,
-    "fills": 19809,
+    "volume_usd": 1512896,
+    "fills": 24486,
     "points": 74,
     "points_label": "owner-stated"
   },
@@ -17,23 +17,25 @@
       "name": "Arcus",
       "slug": "arcus",
       "status": null,
-      "volume_usd": 1135152,
-      "fills": 18558,
-      "maker_pct": 80.7,
+      "volume_usd": 1203305,
+      "fills": 22825,
+      "maker_pct": 79.8,
       "points": 22,
       "points_label": "owner-stated",
-      "updated_at": "2026-10-17"
+      "updated_at": "2026-10-21",
+      "window": "2026-09-06 to 2026-10-21"
     },
     {
       "name": "Nado",
       "slug": "nado",
       "status": null,
-      "volume_usd": 259020,
-      "fills": 1251,
-      "maker_pct": 87.6,
+      "volume_usd": 309591,
+      "fills": 1661,
+      "maker_pct": 84.2,
       "points": 52,
       "points_label": "owner-stated",
-      "updated_at": "2026-10-17"
+      "updated_at": "2026-10-21",
+      "window": "2026-09-06 to 2026-10-21"
     },
     {
       "name": "Lighter RH",
@@ -44,7 +46,9 @@
       "maker_pct": null,
       "points": null,
       "points_label": null,
-      "updated_at": null
+      "updated_at": "2026-10-21",
+      "trades_total": 169,
+      "window": "lifetime"
     },
     {
       "name": "Profit Taking",
@@ -79,5 +83,6 @@
       "points_label": null,
       "updated_at": null
     }
-  ]
+  ],
+  "updated_label": "updated Oct 21, 2026"
 }
