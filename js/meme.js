@@ -10,6 +10,7 @@
   function $$(s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
   function num(v) { return typeof v === "number" && isFinite(v) ? v : null; }
   var nf = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+  var pf = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 });
 
   // menu
   var menu = $("#menu-btn"), nav = $("#nav");
@@ -56,11 +57,11 @@
     var cb = d.combined || {};
     if (num(cb.volume_usd) !== null) setText('[data-stat="vol"]', "$" + nf.format(Math.round(cb.volume_usd)));
     if (num(cb.fills) !== null) setText('[data-stat="fills"]', nf.format(cb.fills));
-    if (num(cb.points) !== null) setText('[data-stat="points"]', nf.format(cb.points));
+    if (num(cb.points) !== null) setText('[data-stat="points"]', pf.format(cb.points));
     (d.desks || []).forEach(function (k) {
       ["volume_usd", "fills", "maker_pct", "points"].forEach(function (f) {
         var v = num(k[f]); if (v === null) return;
-        var t = f === "volume_usd" ? "$" + nf.format(Math.round(v)) : f === "maker_pct" ? v.toFixed(1) + "%" : nf.format(v);
+        var t = f === "volume_usd" ? "$" + nf.format(Math.round(v)) : f === "maker_pct" ? v.toFixed(1) + "%" : f === "points" ? pf.format(v) : nf.format(v);
         setText('[data-d="' + k.slug + "." + f + '"]', t);
       });
     });

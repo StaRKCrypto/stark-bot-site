@@ -7,10 +7,12 @@
   },
   "note": "Arcus and Nado: 45-day window 2026-09-06 to 2026-10-21, from venue fill/order history (maker % volume-weighted). Lighter RH: lifetime trade count. Points are owner-stated (30-day, as of 2026-10-17).",
   "combined": {
-    "volume_usd": 1512896,
+    "volume_usd": 2472896,
     "fills": 24486,
-    "points": 74,
-    "points_label": "owner-stated"
+    "points": 117.86,
+    "points_label": "owner-stated; Arcus + Nado 30-day (as of 2026-10-17) + Lighter RH lifetime (Oct 21, 2026)",
+    "volume_label": "Arcus + Nado 45 days (2026-09-06 to 2026-10-21) + Lighter RH lifetime",
+    "fills_label": "Arcus + Nado 45 days only"
   },
   "desks": [
     {
@@ -41,14 +43,15 @@
       "name": "Lighter RH",
       "slug": "lighter-rh",
       "status": null,
-      "volume_usd": null,
+      "volume_usd": 960000,
       "fills": null,
       "maker_pct": null,
-      "points": null,
-      "points_label": null,
+      "points": 43.86,
+      "points_label": "lifetime, owner-stated, Oct 21, 2026",
       "updated_at": "2026-10-21",
       "trades_total": 169,
-      "window": "lifetime"
+      "window": "lifetime",
+      "volume_label": "lifetime, owner-stated, Oct 21, 2026"
     },
     {
       "name": "Profit Taking",
