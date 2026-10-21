@@ -69,7 +69,7 @@
   }
   if ($("#receipts")) {
     fetch(base + "data/stats.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(render)
-      .catch(function () { var n = $("#load-note"); if (n) n.textContent = "stats file unavailable, showing the baked-in 30-day sample."; });
+      .catch(function () { var n = $("#load-note"); if (n) n.textContent = "stats file unavailable, showing the baked-in 45-day numbers (updated oct 21, 2026)."; });
   }
 
   // terminal typing
