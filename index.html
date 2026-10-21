@@ -107,9 +107,9 @@
   <h2 class="cap sm">the receipts <small>45 days · updated Oct 21, 2026</small></h2>
   <p class="note" id="period">period: 2026-09-17 to 2026-10-17 · points are owner-stated · unknown numbers say "tracking soon", we don't make stuff up</p>
   <div class="bigstats">
-    <div class="big y"><small>combined 45d volume</small><b data-stat="vol">$1,512,896</b></div>
-    <div class="big g"><small>combined 45d fills</small><b data-stat="fills">24,486</b></div>
-    <div class="big p"><small>combined points <em>owner-stated</em></small><b data-stat="points">74</b></div>
+    <div class="big y"><small>combined volume <em>mixed: arcus + nado 45d, lighter rh lifetime</em></small><b data-stat="vol">$2,472,896</b></div>
+    <div class="big g"><small>combined 45d fills <em>arcus + nado only</em></small><b data-stat="fills">24,486</b></div>
+    <div class="big p"><small>combined points <em>owner-stated, mixed: arcus + nado 30d, lighter rh lifetime</em></small><b data-stat="points">117.86</b></div>
   </div>
   <div class="desks">
     <article class="win"><div class="tb"><span>arcus.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
@@ -127,7 +127,8 @@
     <article class="win"><div class="tb"><span>lighter_rh.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
       <h3>lighter rh</h3><dl>
         <div><dt>trades, lifetime</dt><dd>169</dd></div>
-        <div><dt>volume / points</dt><dd class="soon">tracking soon</dd></div></dl></div></article>
+        <div><dt>volume <em>lifetime, owner-stated, Oct 21, 2026</em></dt><dd data-d="lighter-rh.volume_usd">$960,000</dd></div>
+        <div><dt>points <em>lifetime, owner-stated, Oct 21, 2026</em></dt><dd data-d="lighter-rh.points">43.86</dd></div></dl></div></article>
     <article class="win"><div class="tb"><span>profit_taking.log</span><i aria-hidden="true">_ □ x</i></div><div class="wb">
       <h3>profit taking</h3><dl>
         <div><dt>take-profit sells</dt><dd>9</dd></div>
@@ -173,7 +174,7 @@
     <div class="bhead"><svg class="doodle" aria-hidden="true"><use href="img/doodles.svg#ngmi"/></svg><div><p class="tag">03 · Order-book desk</p><h3>Lighter RH</h3></div></div>
     <h4>what it does</h4><p>An order-ladder desk for the Lighter venue. It lays out a ladder of orders and adjusts it as price moves.</p>
     <h4>how it works</h4><ol><li>Builds a ladder of price levels.</li><li>Posts and refreshes orders as the market moves.</li><li>Counts fills and volume.</li><li>Publishes the tape once the desk reports.</li></ol>
-    <p class="bstat" data-bot="lighter-rh"><b>169</b> trades lifetime</p>
+    <p class="bstat" data-bot="lighter-rh"><b>169</b> trades lifetime · <b>$960,000</b> volume · <b>43.86</b> pts <i>(lifetime, owner-stated, Oct 21, 2026)</i></p>
   </div>
 </article>
 <article class="win bot" id="bot-profit-taking">
@@ -276,7 +277,7 @@
   <h2 class="cap sm">faq <small>big brain questions</small></h2>
   <div class="faq">
     <details><summary>is $STARKBOT live?</summary><p>no. not issued, no price, no contract. when that changes the address shows in the launch section and on @StaRKCryptoBots.</p></details>
-    <details><summary>where do the stats come from?</summary><p>from one file, data/stats.json, updated oct 21, 2026: arcus and nado cover 45 days (sept 6 to oct 21), lighter rh is lifetime. a script is meant to refresh it. some extra numbers are owner-reported and labeled. unknown ones say "tracking soon".</p></details>
+    <details><summary>where do the stats come from?</summary><p>from one file, data/stats.json, updated oct 21, 2026: arcus and nado cover 45 days (sept 6 to oct 21), lighter rh is lifetime (trades from the desk journal; volume and points owner-stated oct 21, 2026). combined volume and points mix windows and are labeled. a script is meant to refresh it. some extra numbers are owner-reported and labeled. unknown ones say "tracking soon".</p></details>
     <details><summary>what does "owner-stated" mean?</summary><p>points and youtube numbers are not read from a chain by this site. they are what the owner reported, so they're labeled.</p></details>
     <details><summary>what does "maker %" mean?</summary><p>the share of volume that came from resting orders (adding liquidity) instead of orders that took liquidity.</p></details>
     <details><summary>does this site show balances, pnl or wallets?</summary><p>no. never wallets, balances, equity or pnl, and it holds no keys.</p></details>
