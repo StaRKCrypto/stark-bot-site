@@ -69,7 +69,7 @@
     if (per && p && p.start && p.end) per.textContent = "period: " + p.start + " to " + p.end + " · points are owner-stated · unknown numbers say \"tracking soon\", we don't make stuff up";
   }
   if ($("#receipts")) {
-    fetch(base + "data/stats.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(render)
+    fetch(base + "data/stats.json?v=" + Date.now(), { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(render)
       .catch(function () { var n = $("#load-note"); if (n) n.textContent = "stats file unavailable, showing the baked-in 45-day numbers (updated oct 21, 2026)."; });
   }
 
@@ -199,7 +199,7 @@
   function hasGL() { try { var cv = document.createElement("canvas"); return !!(window.WebGLRenderingContext && (cv.getContext("webgl2") || cv.getContext("webgl"))); } catch (e) { return false; } }
   if (box && !reduce && !lowData && hasGL()) {
     var load = function () {
-      var sc = document.createElement("script"); sc.src = base + "js/vendor/starkcoin.js";
+      var sc = document.createElement("script"); sc.src = base + "js/vendor/starkcoin.js?v=20261021b";
       sc.onload = function () {
         var go = function () { try { window.StarkCoin.init(box); box.classList.add("gl"); } catch (e) { box.classList.remove("gl"); } };
         if (document.fonts && document.fonts.load) document.fonts.load("700 64px 'IBM Plex Sans'").then(go, go); else go();
